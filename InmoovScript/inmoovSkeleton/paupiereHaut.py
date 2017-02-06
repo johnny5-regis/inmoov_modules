@@ -78,8 +78,8 @@ if ispaupiereHaut==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		paupiereHautGauche.rest()
 		sleep(1)
 		#on detache pour pas que ca brule !
-		paupiereHautDroit.detach()
-		paupiereHautGauche.detach()
+		#paupiereHautDroit.detach()
+		#paupiereHautGauche.detach()
 		
 	else:
 		#we force parameter if arduino is off

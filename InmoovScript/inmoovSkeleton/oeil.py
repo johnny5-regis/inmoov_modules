@@ -78,8 +78,8 @@ if isOeil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		oeilGauche.rest()
 		sleep(1)
 		#on detache pour pas que ca brule !
-		oeilDroit.detach()
-		oeilGauche.detach()
+		#oeilDroit.detach()
+		#oeilGauche.detach()
 		
 	else:
 		#we force parameter if arduino is off

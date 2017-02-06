@@ -78,8 +78,8 @@ if isSourcil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		sourcilGauche.rest()
 		sleep(1)
 		#on detache pour pas que ca brule !
-		sourcilDroit.detach()
-		sourcilGauche.detach()
+		#sourcilDroit.detach()
+		#sourcilGauche.detach()
 		
 	else:
 		#we force parameter if arduino is off

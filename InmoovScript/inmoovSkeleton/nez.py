@@ -79,8 +79,8 @@ if isNez==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		berceau.rest()
 		sleep(1)
 		#on detache pour pas que ca brule !
-		rotationCylindre.detach()
-		berceau.detach()
+		#rotationCylindre.detach()
+		#berceau.detach()
 		
 	else:
 		#we force parameter if arduino is off
