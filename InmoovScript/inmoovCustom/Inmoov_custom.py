@@ -17,6 +17,63 @@ ear.addCommand("baisse les sourcils", "python", "baisseSourcil")
 ear.addCommand("regarde vers la droite", "python", "regardDroit")
 ear.addCommand("regarde devant", "python", "regardDevant")
 ear.addCommand("regarde vers la gauche", "python", "regardGauche")
+ear.addCommand("l?ve la t?te", "python", "hautTete")
+ear.addCommand("baisse la t?te", "python", "basTete")
+ear.addCommand("tourner la t?te ? gauche", "python", "teteGauche")
+ear.addCommand("tourner la t?te ? droite", "python", "tetedroite")
+ear.addCommand("repositionne la t?te", "python", "teteMilieu")
+ear.addCommand("incline la t?te ? droite", "python", "inclineDroite")
+ear.addCommand("incline la t?te ? gauche", "python", "inclineGauche")
+
+def inclineDroite():
+	verinDroite.attach()
+	verinGauche.attach()
+	verinDroite.moveTo(0)
+	verinGauche.moveTo(180)
+	sleep(5)
+	verinGauche.detach()
+	verinDroite.detach()
+
+def inclineGauche():
+	verinDroite.attach()
+	verinGauche.attach()
+	verinDroite.moveTo(180)
+	verinGauche.moveTo(0)
+	sleep(5)
+	verinGauche.detach()
+	verinDroite.detach()
+
+def teteMilieu():
+	directionTete.attach()
+	directionTete.moveTo(79)
+
+def teteDroite():
+	directionTete.attach()
+	directionTete.moveTo(0)
+
+def teteGauche():
+	directionTete.attach()
+	directionTete.moveTo(180)
+	
+
+def basTete():
+	verinDroite.attach()
+	verinGauche.attach()
+	verinDroite.moveTo(0)
+	verinGauche.moveTo(0)
+	sleep(5)
+	verinGauche.detach()
+	verinDroite.detach()
+
+def hautTete():
+	verinDroite.attach()
+	verinGauche.attach()
+	verinDroite.moveTo(180)
+	verinGauche.moveTo(180)
+	sleep(5)
+	verinGauche.detach()
+	verinDroite.detach()
+	
 	
 def paupiereOuvre():
 	paupiereHautDroit.attach()

@@ -121,4 +121,122 @@
 	</template>
   </category>
   
+   <category>
+    <pattern>lève la tête</pattern>
+	<template>
+		<random>
+			  <li>ok</li>
+			  <li>voila c'est fait</li>
+		</random>
+			<oob>
+			  <mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>hautTete()</param>
+			  </mrl>
+			</oob>
+	</template>
+  </category>
+   <category>
+    <pattern>baisse la tête</pattern>
+	<template>
+		<random>
+			  <li>ok</li>
+			  <li>voila c'est fait</li>
+		</random>
+			<oob>
+			  <mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>basTete()</param>
+			  </mrl>
+			</oob>
+	</template>
+  </category>
+  
+       <category>
+    <pattern>tourner la tête à gauche</pattern>
+	<template>
+		<random>
+			  <li>ok</li>
+			  <li>voila c'est fait</li>
+		</random>
+			<oob>
+			  <mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>teteGauche()</param>
+			  </mrl>
+			</oob>
+	</template>
+  </category>
+  
+         <category>
+    <pattern>tourner la tête à droite</pattern>
+	<template>
+		<random>
+			  <li>ok</li>
+			  <li>voila c'est fait</li>
+		</random>
+			<oob>
+			  <mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>teteDroite()</param>
+			  </mrl>
+			</oob>
+	</template>
+  </category>
+  
+           <category>
+    <pattern>repositionne la tête</pattern>
+	<template>
+		<random>
+			  <li>ok</li>
+			  <li>voila c'est fait</li>
+		</random>
+			<oob>
+			  <mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>teteMilieu()</param>
+			  </mrl>
+			</oob>
+	</template>
+  </category>
+  
+            <category>
+    <pattern>incline la tête à droite</pattern>
+	<template>
+		<random>
+			  <li>ok</li>
+			  <li>voila c'est fait</li>
+		</random>
+			<oob>
+			  <mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>inclineDroite()</param>
+			  </mrl>
+			</oob>
+	</template>
+  </category>
+  
+              <category>
+    <pattern>incline la tête à gauche</pattern>
+	<template>
+		<random>
+			  <li>ok</li>
+			  <li>voila c'est fait</li>
+		</random>
+			<oob>
+			  <mrl>
+				<service>python</service>
+				<method>exec</method>
+				<param>inclineGauche()</param>
+			  </mrl>
+			</oob>
+	</template>
+  </category>
+  
 </aiml>
