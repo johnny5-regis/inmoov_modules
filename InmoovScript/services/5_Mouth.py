@@ -34,16 +34,16 @@ python.subscribe(mouth.getName(),"publishEndSpeaking")
 def talk(data):
 	if data:
 		if data[0:2]=="l ":data=data.replace("l ", "l'")
-		mouth.speak(unicode(data,'utf-8'))
+		mouth.speak(data)
 		
 def talkBlocking(data):
 	if data:
 		if data[0:2]=="l ":data=data.replace("l ", "l'")
-		mouth.speakBlocking(unicode(data,'utf-8'))
+		mouth.speakBlocking(data)
 		
 def talkEvent(data):
 	if IsMute==0:
-		subconsciousMouth.speakBlocking(unicode(data,'utf-8'))
+		subconsciousMouth.speakBlocking(data)
 
 #stop autolisten
 def onEndSpeaking(text):
