@@ -87,7 +87,7 @@ if isNeopixelActivated==1:
 
 #function to call to clean poweroff neopixel	
 def StopNeopixelAnimation():
-	if isNeopixelActivated==1:
+	if isNeopixelActivated==0:
 		neopixel.animationStop()
 		
 
@@ -104,5 +104,8 @@ def PlayNeopixelAnimation(Animation_Name,red=255,green=255,blue=255,speed=1,dura
 
 sleep(0.1)
 if boot_green:		
-	PlayNeopixelAnimation("Theater Chase", 0, 255, 0, 5)
+	PlayNeopixelAnimation("Ironman", 95, 45, 5, 1)
+	
+
+
 

@@ -10,13 +10,23 @@ def MoveHead(timedata):
 		#redefine next loop
 		MoveHeadTimer.setInterval(random.randint(200,1000))
 		if isHeadActivated:
-			i01.setHeadVelocity(random.randint(5,25),random.randint(5,25))
+			
 			#wait servo last move
-			if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(60,120))
-			if not head.neck.isMoving():head.neck.moveTo(random.uniform(60,120))
+			#une meme position pour les 2
+			sourcilsPos=random.uniform(35,65)
+			if not sourcilDroit.isMoving():
+				sourcilDroit.moveTo(sourcilsPos)
+				sourcilGauche.moveTo(sourcilsPos)
+			paupierePos=random.uniform(120,155)
+			if not sourcilDroit.isMoving():
+				paupiereHautGauche.moveTo(paupierePos)
+				paupiereHautDroit.moveTo(paupierePos)
+			
+			if not verinDroite.isMoving():verinDroite.moveTo(random.uniform(75,115))
+			if not verinGauche.isMoving():verinGauche.moveTo(random.uniform(70,110))
 		if isRollNeckActivated:
 			rollneck.setVelocity(random.randint(5,25))
-			if not head.neck.isMoving():rollneck.moveTo(random.uniform(60,120))
+			if not directionTete.isMoving():directionTete.moveTo(random.uniform(69,89))
 	else:
 		MoveHeadTimer.stopClock()
 	
@@ -26,28 +36,28 @@ def MoveHeadStart():
 
 	if RobotCanMoveHeadWhileSpeaking:
 		if isHeadActivated:
-			head.neck.setAcceleration(20)
-			head.rothead.setAcceleration(20)
-			head.rothead.enableAutoDetach(0)
-			head.neck.enableAutoDetach(0)
+			paupiereHautGauche.setAcceleration(20)
+			paupiereHautDroit.setAcceleration(20)
+			sourcilDroit.setAcceleration(20)
+			sourcilGauche.setAcceleration(20)
+			paupiereHautDroit.enableAutoDetach(0)
+			paupiereHautGauche.enableAutoDetach(0)
+			sourcilDroit.enableAutoDetach(0)
+			sourcilGauche.enableAutoDetach(0)
 		if isRollNeckActivated:
-			rollneck.enableAutoDetach(0)
-			rollneck.setAcceleration(20)
+			directionTete.enableAutoDetach(0)
+			directionTete.setAcceleration(20)
 	else:
 		MoveHeadTimer.stopClock()
 		
 def MoveHeadStop():
 	
 	if RobotCanMoveHeadWhileSpeaking:
-		if isHeadActivated:
-			head.rothead.enableAutoDetach(1)
-			head.neck.enableAutoDetach(1)
-			i01.setHeadVelocity(200,200)
-			i01.head.rest()
-		if isRollNeckActivated:
-			rollneck.enableAutoDetach(1)
-			rollneck.rest()
-
+		print "stop"
+		#on remet les servo au milieu si on veut :)
+		
+		
+		
 
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
 MoveHeadTimer.addListener("clockStarted", python.name, "MoveHeadStart")	

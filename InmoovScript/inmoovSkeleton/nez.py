@@ -58,7 +58,6 @@ if isNez==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		rotationCylindre.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'rotationCylindre'))
 		rotationCylindre = Runtime.start("rotationCylindre","Servo")
 		# servo.attach(ARDUINO, PIN)
-		rotationCylindre.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotationCylindre'))
 		
 		berceau = Runtime.create("berceau", "Servo")
 		berceau.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'berceau'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'berceau')) 
@@ -66,13 +65,17 @@ if isNez==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		berceau.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'berceau'))
 		berceau = Runtime.start("berceau","Servo")
 		# servo.attach(ARDUINO, PIN)		
-		berceau.attach(NezArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'berceau'))
+		
 			
 		
 			
-		if autoDetach:
-			rotationCylindre.enableAutoAttach(1)
-			berceau.enableAutoAttach(1)
+		
+		rotationCylindre.enableAutoAttach(1)
+		berceau.enableAutoAttach(1)
+		rotationCylindre.enableAutoDetach(0)
+		berceau.enableAutoDetach(0)
+		berceau.attach(NezArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'berceau'))
+		rotationCylindre.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotationCylindre'))
 			
 		#position repos
 		rotationCylindre.rest()

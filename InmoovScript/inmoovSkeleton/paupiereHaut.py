@@ -57,7 +57,6 @@ if ispaupiereHaut==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		paupiereHautDroit.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'paupiereHautDroit'))
 		paupiereHautDroit = Runtime.start("paupiereHautDroit","Servo")
 		# servo.attach(ARDUINO, PIN)
-		paupiereHautDroit.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'paupiereHautDroit'))
 		
 		paupiereHautGauche = Runtime.create("paupiereHautGauche", "Servo")
 		paupiereHautGauche.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'paupiereHautGauche'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'paupiereHautGauche')) 
@@ -65,13 +64,17 @@ if ispaupiereHaut==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		paupiereHautGauche.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'paupiereHautGauche'))
 		paupiereHautGauche = Runtime.start("paupiereHautGauche","Servo")
 		# servo.attach(ARDUINO, PIN)		
+		paupiereHautDroit.enableAutoAttach(1)
+		paupiereHautGauche.enableAutoAttach(1)
+		paupiereHautDroit.enableAutoDetach(0)
+		paupiereHautGauche.enableAutoDetach(0)
 		paupiereHautGauche.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'paupiereHautGauche'))
-			
+		paupiereHautDroit.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'paupiereHautDroit'))
+		
 		
 			
-		if autoDetach:
-			paupiereHautDroit.enableAutoAttach(1)
-			paupiereHautGauche.enableAutoAttach(1)
+		
+	
 			
 		#position repos
 		paupiereHautDroit.rest()

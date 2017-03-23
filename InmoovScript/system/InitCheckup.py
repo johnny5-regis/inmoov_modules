@@ -136,7 +136,6 @@ else:
 if boot_green:		
 	PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
 	sleep(2)
-	StopNeopixelAnimation()
 
 
 

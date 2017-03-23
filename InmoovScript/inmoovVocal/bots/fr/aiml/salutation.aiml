@@ -350,6 +350,13 @@
         <li>Bonjour <get name="name" />! </li>
         <li>Salut <get name="name" />! </li>
       </random>
+		<oob>
+          <mrl>
+            <service>python</service>
+            <method>exec</method>
+            <param>open()</param>
+          </mrl>
+        </oob>
     </template>
   </category>
   <category>

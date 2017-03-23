@@ -57,7 +57,7 @@ if isOeil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		oeilDroit.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'oeilDroit'))
 		oeilDroit = Runtime.start("oeilDroit","Servo")
 		# servo.attach(ARDUINO, PIN)
-		oeilDroit.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'oeilDroit'))
+		
 		
 		oeilGauche = Runtime.create("oeilGauche", "Servo")
 		oeilGauche.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'oeilGauche'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'oeilGauche')) 
@@ -65,14 +65,17 @@ if isOeil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		oeilGauche.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'oeilGauche'))
 		oeilGauche = Runtime.start("oeilGauche","Servo")
 		# servo.attach(ARDUINO, PIN)		
-		oeilGauche.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'oeilGauche'))
+		
+		oeilDroit.enableAutoAttach(1)
+		oeilGauche.enableAutoAttach(1)
+		oeilDroit.enableAutoDetach(0)
+		oeilGauche.enableAutoDetach(0)
 			
+		oeilGauche.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'oeilGauche'))
+		oeilDroit.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'oeilDroit'))	
 		
 			
-		if autoDetach:
-			oeilDroit.enableAutoAttach(1)
-			oeilGauche.enableAutoAttach(1)
-			
+	
 		#position repos
 		oeilDroit.rest()
 		oeilGauche.rest()

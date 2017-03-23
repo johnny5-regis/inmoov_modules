@@ -10,8 +10,8 @@
 # ##############################################################################  
 
 #read current skeleton part config
-isHeadActivated=0
-isRollNeckActivated=0
+isHeadActivated=1
+isRollNeckActivated=1
 inmoovLifeConfigFile=inspect.getfile(inspect.currentframe()).replace('.py','')
 
 CheckFileExist(inmoovLifeConfigFile)

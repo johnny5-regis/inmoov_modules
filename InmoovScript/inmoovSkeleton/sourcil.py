@@ -57,7 +57,7 @@ if isSourcil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		sourcilDroit.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'sourcilDroit'))
 		sourcilDroit = Runtime.start("sourcilDroit","Servo")
 		# servo.attach(ARDUINO, PIN)
-		sourcilDroit.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'sourcilDroit'))
+		
 		
 		sourcilGauche = Runtime.create("sourcilGauche", "Servo")
 		sourcilGauche.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'sourcilGauche'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'sourcilGauche')) 
@@ -65,13 +65,15 @@ if isSourcil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		sourcilGauche.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'sourcilGauche'))
 		sourcilGauche = Runtime.start("sourcilGauche","Servo")
 		# servo.attach(ARDUINO, PIN)		
+		sourcilDroit.enableAutoAttach(1)
+		sourcilGauche.enableAutoAttach(1)
+		sourcilDroit.enableAutoDetach(0)
+		sourcilGauche.enableAutoDetach(0)
 		sourcilGauche.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'sourcilGauche'))
+		sourcilDroit.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'sourcilDroit'))	
 			
 		
-			
-		if autoDetach:
-			sourcilDroit.enableAutoAttach(1)
-			sourcilGauche.enableAutoAttach(1)
+		
 			
 		#position repos
 		sourcilDroit.rest()
