@@ -17,7 +17,7 @@ if MyvoiceTTS=="VoiceRss":
 
 
 mouth=i01.mouth
-
+mouth.setRate(0)
 
 
 #vocal startup globalized so :

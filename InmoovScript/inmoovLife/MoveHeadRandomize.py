@@ -13,7 +13,7 @@ def MoveHead(timedata):
 			
 			#wait servo last move
 			#une meme position pour les 2
-			sourcilsPos=random.uniform(35,65)
+			sourcilsPos=random.uniform(30,65)
 			if not sourcilDroit.isMoving():
 				sourcilDroit.moveTo(sourcilsPos)
 				sourcilGauche.moveTo(sourcilsPos)
