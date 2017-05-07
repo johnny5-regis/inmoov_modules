@@ -70,10 +70,10 @@ if isNez==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		
 			
 		
-		rotationCylindre.enableAutoAttach(1)
-		berceau.enableAutoAttach(1)
-		rotationCylindre.enableAutoDetach(0)
-		berceau.enableAutoDetach(0)
+		rotationCylindre.enableAutoEnable(1)
+		berceau.enableAutoEnable(1)
+		rotationCylindre.enableAutoDisable(0)
+		berceau.enableAutoDisable(0)
 		berceau.attach(NezArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'berceau'))
 		rotationCylindre.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'rotationCylindre'))
 			
