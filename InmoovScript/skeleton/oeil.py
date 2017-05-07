@@ -66,10 +66,10 @@ if isOeil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 		oeilGauche = Runtime.start("oeilGauche","Servo")
 		# servo.attach(ARDUINO, PIN)		
 		
-		oeilDroit.enableAutoEnable(1)
-		oeilGauche.enableAutoEnable(1)
-		oeilDroit.enableAutoDisable(0)
-		oeilGauche.enableAutoDisable(0)
+		oeilDroit.enableAutoAttach(1)
+		oeilGauche.enableAutoAttach(1)
+		oeilDroit.enableAutoDetach(0)
+		oeilGauche.enableAutoDetach(0)
 			
 		oeilGauche.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'oeilGauche'))
 		oeilDroit.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'oeilDroit'))	
