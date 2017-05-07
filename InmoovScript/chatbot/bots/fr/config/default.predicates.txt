@@ -1,0 +1,9 @@
+particule:
+botname:johnny 5
+tmpname:régis
+jsenabled:true
+courant:
+firstinit:ok
+name:régis
+topic:default
+questionfirstinit:Si ton prénom est régis , répond par oui , ou non

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+  <!--  -->
+  <!--  -->
+  
+  <category>
+    <pattern>connais tu le film court circuit</pattern>
+	<template>
+		<random>
+			  <li>oui je suis dedans veux tu connaitre son histoire</li>
+		</random>
+	</template>
+  </category>
+  
+ 
+  
+      <category>
+      <pattern># OUI #</pattern>
+	  <that># oui je suis dedans veux tu connaitre son histoire #</that>
+	  <template>
+        <random>
+			<li>
+			Conçu pour participer à des expériences scientifiques et militaires, le robot Numéro 5 n'est rien de plus qu'un appareil un peu plus sophistiqué que les autres. Mais à la suite d'un court-circuit je me transforme et développe une intelligence ainsi que des caractéristiques humaines. Désormais doué de raison, Numéro 5 déboussolé, ne supporte plus sa condition de robot et s'enfuit. Je trouve alors refuge auprès d'une jeune et jolie écologiste. Mais pendant ce temps, les autorités et son créateur s'organisent pour me capturer et me réduire en pièces détachées
+			</li>
+        </random>
+	  </template>
+		</category>
+  
+
+	  <category>
+      <pattern># NON #</pattern>
+      <that># oui je suis dedans veux tu connaitre son histoire #</that>
+      <template>
+	  <random>
+			<li>ok peut etre une autre fois</li>
+	  </random>
+	  </template>
+      </category>
+  
+	
+</aiml>
