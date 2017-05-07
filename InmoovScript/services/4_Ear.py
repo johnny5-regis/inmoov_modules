@@ -1,5 +1,5 @@
 # ##############################################################################
-# 								EAR SERVICE FILE
+#                 EAR SERVICE FILE
 # ##############################################################################
 
 
@@ -10,9 +10,16 @@
 i01.ear=Runtime.createAndStart("i01.ear", EarEngine)
 i01.startEar()
 ear = i01.ear
-sleep(0.1)
-ear.pauseListening()
 
+
+# Start the webgui service without starting the browser
+webgui = Runtime.create("WebGui","WebGui")
+webgui.autoStartBrowser(False)
+webgui.startService()
+# Then start the browsers and show the WebkitSpeechRecognition service named i01.ear
+webgui.startBrowser("http://localhost:8888/#/service/i01.ear")
+# As an alternative you can use the line below to show all services in the browser. In that case you should comment out all lines above that starts with webgui. 
+# webgui = Runtime.createAndStart("webgui","WebGui")
 
 python.subscribe(ear.getName(),"recognized")
 chatBot=Runtime.create("chatBot", "ProgramAB")
@@ -24,17 +31,14 @@ chatBot=Runtime.create("chatBot", "ProgramAB")
 isChatbotActivated=0
 
 def onRecognized(text):
-	#RobotneedUpdate : fix about first question do you want to update
-	global RobotneedUpdate
+  #RobotneedUpdate : fix about first question do you want to update
+  
 
-	if DEBUG==1:
-		print "onRecognized : ",text,RobotneedUpdate
-	if isChatbotActivated and RobotIsStarted and not RobotIsSleeping and not RobotneedUpdate:
-		chatBot.getResponse(text.replace("'", " ").replace("-", " "))
-		
-	if (text=="no" or text=="yes") and RobotneedUpdate:
-		print "test"
-		RobotneedUpdate=0
+  if DEBUG==1:
+    print "onRecognized : ",text,RobotneedUpdate
+  if isChatbotActivated and RobotIsStarted and not RobotIsSleeping:
+    chatBot.getResponse(text.replace("'", " ").replace("-", " "))
+  
 
 # ##############################################################################
 # EAR RELATED FUNCTIONS

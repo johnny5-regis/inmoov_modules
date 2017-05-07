@@ -1,4 +1,4 @@
-##						   ___  ________   _____ ______   ________  ________  ___      ___ 
+﻿##						   ___  ________   _____ ______   ________  ________  ___      ___ 
 ##						  |\  \|\   ___  \|\   _ \  _   \|\   __  \|\   __  \|\  \    /  /|
 ##						  \ \  \ \  \\ \  \ \  \\\__\ \  \ \  \|\  \ \  \|\  \ \  \  /  / /
 ##						   \ \  \ \  \\ \  \ \  \\|__| \  \ \  \\\  \ \  \\\  \ \  \/  / / 
@@ -76,4 +76,4 @@ def fingermiddle():
 
 ##############
 #Go more further ! and code your own script in this file
-execfile(RuningFolder+'inmoovCustom/Inmoov_custom.py')
+execfile(RuningFolder+'custom/Inmoov_custom.py')

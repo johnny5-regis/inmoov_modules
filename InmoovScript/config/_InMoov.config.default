@@ -1,0 +1,23 @@
+[MAIN]
+scripttype = Full
+debug = 0
+
+[TTS]
+myvoicetts = VoiceRss
+myvoicetype = Bruno
+mylanguage = fr
+voicerssapi = f5e41202b46e41da8c34a25180dd5672
+
+[ARDUINO]
+myrightport = COM7
+forcearduinoisconnected = False
+myleftport = COM4
+
+[VOCAL]
+earengine = WebkitSpeechRecognition
+ismute = 0
+
+[GENERAL]
+loadingpicture = False
+startupsound = True
+iuselinux = False
