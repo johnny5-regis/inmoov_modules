@@ -1,5 +1,5 @@
 # ##############################################################################
-# 								INITIAL CHECKUP
+#                 INITIAL CHECKUP
 # ##############################################################################
 
 ################################
@@ -15,6 +15,9 @@ print "Starting..."
 ################################
 # INIT.1 - system dependencies & language pack
 ################################
+#subconsciousMouth for diagnose
+subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
+subconsciousMouth.setVoice("cmu-slt-hsmm")
 
 # libraries import
 execfile(RuningFolder+'/system/Import_Libraries.py')
@@ -26,121 +29,110 @@ RuningFolder=os.getcwd().replace("\\", "/")+"/"+RuningFolder+"/"
 # global vars import
 execfile(RuningFolder+'/system/Robot_Satus_GlobalsVars.py')
 
+#inmoov.fr webgui
+execfile(RuningFolder+'/system/inmoovGui.py')
+
 # we load personal parameters
 execfile(RuningFolder+'/system/ConfigParser.py')
-if DEBUG!=1:runtime.setLogLevel("WARN")
-# vocal errors
-execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
+if DEBUG:
+  runtime.setLogLevel("INFO")
+else:
+  runtime.setLogLevel("WARN")
 
 # language pack
 execfile(RuningFolder+'/system/languagePack.py')
 
+# vocal errors
+execfile(RuningFolder+'/system/Errors.py'.encode('utf8'))
 
-#subconsciousMouth for diagnose
-subconsciousMouth = Runtime.createAndStart("subconsciousMouth", "MarySpeech")
-subconsciousMouth.setVoice("cmu-slt-hsmm")
+
 
 
 ImageDisplay=Runtime.createAndStart("ImageDisplay", "ImageDisplay")
 if LoadingPicture:
-	r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/loading_1024-600.jpg',1)
+  r=ImageDisplay.displayFullScreen(RuningFolder+'/system/pictures/loading_1024-600.jpg',1)
 
 ################################
 # INIT.2 - mrl core updater
 ################################
 
-execfile(RuningFolder+'/system/updater/mrl_updater.py')
+#execfile(RuningFolder+'/system/updater/mrl_updater.py')
 
 ################################
 # INIT.3 - services call
 ################################
 #we load services python side from services folder
 #I have some strange no blocking event with LoadGesture so use classic execfile
-for filename in sorted(os.listdir(RuningFolder+'services')):		
-	if os.path.splitext(filename)[1] == ".py":
-		execfile(RuningFolder+'services/'+filename.encode('utf8'))
-		print filename
+for filename in sorted(os.listdir(RuningFolder+'services')):    
+  if os.path.splitext(filename)[1] == ".py":
+    execfile(RuningFolder+'services/'+filename.encode('utf8'))
+    print filename
 
 #mrl too old dude, update it !
-if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')		
+#if actualVersion<int(mrlCompatible):errorSpokenFunc('MrlNeedUpdate')    
 ################################
-# INIT.4 - skeleton loading
+# INIT.4 - skeleton loading & virtual skeleton
 ################################
 #we launch Inmoov Skeleton
-for filename in os.listdir(RuningFolder+'inmoovSkeleton'):		
-	if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'inmoovSkeleton/'+filename.encode('utf8'))
+for filename in os.listdir(RuningFolder+'skeleton'):    
+  if os.path.splitext(filename)[1] == ".py":execfile(RuningFolder+'skeleton/'+filename.encode('utf8'))
+sleep(1)
+if ScriptType=="Virtual" or virtualInmoovAlwaysActivated:i01.startVinMoov()
 
 ################################
 # INIT.5 - ear.addcmmands
 ################################
 #if chatbot loaded we do not load ear.addcommands
-for root, subdirs, files in os.walk(RuningFolder+'inmoovVocal/ear.addCommand'):
-	for name in files:
-		if name.split(".")[-1] == "py":
-			execfile(os.path.join(root, name).encode('utf8'))
-			if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)		
+for root, subdirs, files in os.walk(RuningFolder+'minimal'):
+  for name in files:
+    if name.split(".")[-1] == "py":
+      execfile(os.path.join(root, name).encode('utf8'))
+      if DEBUG==1:print "debug  ear.addcmmands : ",os.path.join(root, name)    
 
 
 ################################
 # INIT.6- inmoov loading
 ################################
-	
+  
 #we launch Inmoov Gestures
-for root, subdirs, files in os.walk(RuningFolder+'inmoovGestures'):
-	for name in files:
-		if name.split(".")[-1] == "py":
-			execfile(os.path.join(root, name))
-			if DEBUG==1:print "debug inmoovGestures : ",os.path.join(root, name)
-		
+for root, subdirs, files in os.walk(RuningFolder+'gestures'):
+  for name in files:
+    if name.split(".")[-1] == "py":
+      execfile(os.path.join(root, name))
+      if DEBUG==1:print "debug inmoovGestures : ",os.path.join(root, name)
+    
 #we launch Inmoov life
-for root, subdirs, files in os.walk(RuningFolder+'inmoovLife'):
-	for name in sorted(files):
-		if name.split(".")[-1] == "py":
-			execfile(os.path.join(root, name))
-			if DEBUG==1:print "debug inmoovLife : ",os.path.join(root, name)
+for root, subdirs, files in os.walk(RuningFolder+'life'):
+  for name in sorted(files):
+    if name.split(".")[-1] == "py":
+      execfile(os.path.join(root, name))
+      if DEBUG==1:print "debug inmoovLife : ",os.path.join(root, name)
 
 #create the custom script, only if not exist
-if not os.path.isfile(RuningFolder+'inmoovCustom/Inmoov_custom.py'):shutil.move(RuningFolder+'inmoovCustom/Inmoov_custom.py.default',RuningFolder+'inmoovCustom/Inmoov_custom.py')
+if not os.path.isfile(RuningFolder+'custom/Inmoov_custom.py'):shutil.move(RuningFolder+'custom/Inmoov_custom.py.default',RuningFolder+'custom/Inmoov_custom.py')
 
+      
+################################
+# INIT.8 - yes there is no 7 :) great, inmoov is alive
+################################
 
-################################
-# INIT.7 - inmoov APPS - TODO - WIP
-################################
-
-#we launch Inmoov APPS - GAMES
-for root, subdirs, files in os.walk(RuningFolder+'inmoovAPPS'):
-	for name in files:
-		if name.split(".")[-1] == "py":
-			execfile(os.path.join(root, name))
-			if DEBUG==1:print "debug inmoovAPPS : ",os.path.join(root, name)
-
-			
-################################
-# INIT.8 - great, inmoov is alive
-################################
-#first init check
+#wip updater
 execfile(RuningFolder+'/system/updater/inmoovos_updater.py')
 
 
-
-if CheckVersion():
-	r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
-	talkBlocking(lang_newVersion)
-	
+#first init check
+if CheckVersion() and isChatbotActivated:
+  r=ImageDisplay.displayFullScreen(RuningFolder+'system/pictures/update_available_1024-600.jpg',1)
+  chatBot.getResponse("SYSTEM_NEW_VERSION")
+#  
+  
 else:
-	sleepModeWakeUp()
-	
+  sleepModeWakeUp()
 
 
-
-if boot_green:		
-	PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
-	sleep(2)
-
-
-
-
-
-
-
-
+if boot_green:    
+  PlayNeopixelAnimation("Flash Random", 0, 255, 0, 1)
+  sleep(2)
+  StopNeopixelAnimation()
+  sleep(1)
+  PlayNeopixelAnimation("Flash Random", 0, 255, 50, 10)

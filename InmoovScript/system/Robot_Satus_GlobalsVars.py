@@ -1,9 +1,9 @@
   
 # ##############################################################################
-# 								ROBOT STATUS
+#                 ROBOT STATUS
 # ##############################################################################
 
-	
+  
 # we try here to give explicit names of vars
 # you can read them in your script
 # DONT CHANGE VARS HERE THEY ARE DYNAMICAL , IT IS A DECLARATION PART
@@ -15,13 +15,17 @@ RobotIsActualySpeaking=0
 global RobotIsErrorMode
 RobotIsErrorMode=0
 global RobotCanMoveBodyRamdom
-RobotCanMoveRamdom=0
+RobotCanMoveBodyRamdom=0
 global MoveHeadRandom
 MoveHeadRandom=1
 global RobotIsSleeping
 RobotIsSleeping=0
 global RobotneedUpdate
 RobotneedUpdate=0
+global batterieLevel
+batterieLevel=100
+global iHaveInmoovFrKey
+iHaveInmoovFrKey=0
 
 #system values
 #used by mouthcontrol audio signal processing
