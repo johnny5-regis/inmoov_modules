@@ -78,8 +78,7 @@ def onEndSpeaking(text):
 
   if RobotIsStarted==1:
     
-    MoveHeadTimer.stopClock()
-    MoveEyesTimer.stopClock()
+
     if flash_when_speak:
       StopNeopixelAnimation()
 
