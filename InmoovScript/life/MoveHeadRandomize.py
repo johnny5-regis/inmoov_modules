@@ -1,7 +1,7 @@
 # ##############################################################################
 #            *** ROBOT MOVE THE HEAD ( ex WHILE SPEAKIN ) ***
 # ##############################################################################
-  
+RobotCanMoveHeadWhileSpeaking=1 
 MoveHeadTimer = Runtime.start("MoveHeadTimer","Clock")
 isHeadActivated=1
 isRollNeckActivated=1

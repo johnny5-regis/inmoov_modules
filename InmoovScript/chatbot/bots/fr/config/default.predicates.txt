@@ -7,3 +7,5 @@ firstinit:ok
 name:régis
 topic:default
 questionfirstinit:
+meteo:800
+heurequestion:0

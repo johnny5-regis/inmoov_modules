@@ -7,8 +7,8 @@
 
 
 
-talk("Bonjour ! comment ça va")
-
+#talk("Bonjour ! comment ça va")
+PlayNeopixelAnimation("Theater Chase", 95, 45, 5, 50)
 
 ear.addCommand(u"ouvre les yeux", "python", "paupiereOuvre")
 ear.addCommand(u"ferme les yeux", "python", "paupiereFerme")
