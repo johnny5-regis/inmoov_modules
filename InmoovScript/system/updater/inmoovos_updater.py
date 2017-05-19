@@ -89,7 +89,9 @@ def RemoveFile(file):
     pass
   
 
-RemoveFile(RuningFolder+"skeleton/rollNeck.py")
+RemoveFile(RuningFolder+"gestures/translateText.py")
+RemoveFile(RuningFolder+"gestures/translateTextFR.py")
+RemoveFile(RuningFolder+"life/AutoListen.py")
 
   #clean up .default.config
 for root, subdirs, files in os.walk(RuningFolder):

@@ -54,23 +54,23 @@
   </category>
   <category>
     <pattern>_ ROBOT</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UN HOMME</that>
-    <template>un homme robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
+    <template>une dame robot, et même, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>_ ROBOT *</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UNE HOMME</that>
-    <template>un homme robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
+    <template>une dame robot, et même, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>_ BOT</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UNE HOMME</that>
-    <template>un homme robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
+    <template>une dame robot, et même, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>_ BOT *</pattern>
-    <that>C EST COMME ÇA QUE TU PARLES À UNE HOMME</that>
-    <template>un homme robot, et même, ce n'est pas une raison</template>
+    <that>C EST COMME ÇA QUE TU PARLES À UNE DAME</that>
+    <template>une dame robot, et même, ce n'est pas une raison</template>
   </category>
   <category>
     <pattern>AIMES TU LE SEXE</pattern>

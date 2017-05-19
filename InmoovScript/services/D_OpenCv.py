@@ -21,6 +21,10 @@ ThisServicePartConfig.read(ThisServicePart+'.config')
 isOpenCvActivated=0
 global opencvStarted  
 opencvStarted=0
+global eyesTrackingisIdle
+global headTrackingisIdle
+eyesTrackingisIdle=1
+headTrackingisIdle=1
 isOpenCvActivated=ThisServicePartConfig.getboolean('MAIN', 'isOpenCvActivated')
 CameraIndex=ThisServicePartConfig.getint('MAIN', 'CameraIndex') 
 DisplayRender=ThisServicePartConfig.get('MAIN', 'DisplayRender')
@@ -38,6 +42,8 @@ python.subscribe(opencv.getName(),"publishOpenCVData")
 def openCvInit():
   global opencvStarted  
   opencvStarted=0
+ 
+  
   if DisplayRender=="SarxosFrameGrabber":opencv.setFrameGrabberType("org.myrobotlab.opencv."+DisplayRender)
   opencv.setCameraIndex(CameraIndex)
   opencv.removeFilters()
@@ -70,7 +76,6 @@ def onOpenCVData(data):
   if data and not opencvStarted:
     opencvStarted=1
   global FaceDetected
-  
 
 if isOpenCvActivated:openCvInit()
   

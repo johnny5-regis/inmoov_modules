@@ -75,16 +75,14 @@ def talkEvent(data):
 
 #stop autolisten
 def onEndSpeaking(text):
-  global RobotIsActualySpeaking
-  global RobotCanMoveHeadWhileSpeaking
-  RobotIsActualySpeaking=0
+
   if RobotIsStarted==1:
     
     MoveHeadTimer.stopClock()
+    MoveEyesTimer.stopClock()
     if flash_when_speak:
       StopNeopixelAnimation()
-    
-    RobotCanMoveHeadWhileSpeaking=1
+
   if AudioSignalProcessing:
     try:
       left.disablePin(AnalogPinFromSoundCard)
@@ -100,9 +98,6 @@ def onEndSpeaking(text):
   
 def onStartSpeaking(text):
   
-  global RobotIsActualySpeaking
-  RobotIsActualySpeaking=1
-  
   if AudioSignalProcessing:
     try:
       
@@ -112,9 +107,13 @@ def onStartSpeaking(text):
       print "onStartSpeaking error"
       pass
   if RobotIsStarted:
-    MoveHeadTimer.startClock()
-    if flash_when_speak:    
-      PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
+
+    #if 'oui' in text or 'yes' in text or 'ja' in text:Yes()
+    #if 'non' in text or 'no' in text or 'nicht' in text or 'neen' in text:No()
+
+    if random.randint(0,1)==1:MoveHeadTimer.startClock()
+    if random.randint(0,1)==1:MoveEyesTimer.startClock()
+    if flash_when_speak:PlayNeopixelAnimation("Flash Random", 255, 255, 255, 1)
     
 
 

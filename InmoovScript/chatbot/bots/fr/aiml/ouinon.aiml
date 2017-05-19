@@ -96,7 +96,7 @@
   <category>
     <pattern>NON</pattern>
     <that>* TU ES UN POËTE</that>
-    <template>Mais ta réponse était si originale.</template>
+    <template>Mais ton réponse était si originale.</template>
   </category>
   <category>
     <pattern>NON</pattern>

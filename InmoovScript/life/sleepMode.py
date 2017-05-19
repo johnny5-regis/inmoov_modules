@@ -9,7 +9,7 @@
 
 
 def sleepModeWakeUp():
-  
+  ear.setAutoListen(True)
   if isPirActivated:
       PirControlerArduino.enablePin(PirPin,1)
       SleepTimer.startClock()
@@ -47,7 +47,7 @@ def sleepModeWakeUp():
 
 
 def sleepModeSleep():
-  
+  ear.setAutoListen(False)
   global RobotIsSleeping
   ImageDisplay.exitFS()
   ImageDisplay.closeAll()
@@ -81,7 +81,7 @@ def welcomeMessage():
     else:
       chatBot.getResponse("WAKE_UP")
   else:
-    talkEvent(lang_ready)
+    talk(lang_ready)
   RobotIsStarted=1
     
 def humanDetected():    

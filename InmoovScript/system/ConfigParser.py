@@ -19,10 +19,9 @@ def CheckFileExist(File):
 CheckFileExist(RuningFolder+'config/' + '_InMoov')
 LaunchSwingGui=True
 
-
    
 BasicConfig = ConfigParser.ConfigParser(allow_no_value = True)
-BasicConfig.read(RuningFolder+'config/' + '_Inmoov.config')
+BasicConfig.read(RuningFolder+'config/' + '_InMoov.config')
 
 #file patch
 configNeedUpdate=0
@@ -49,7 +48,6 @@ except:
   configNeedUpdate=1
   pass
   
-  
 try:
     if BasicConfig.get('VOCAL', 'EarInterpretEngine')!='':
       BasicConfig.remove_option('VOCAL', 'EarInterpretEngine')
@@ -57,18 +55,14 @@ try:
 except:
   pass
   
-
   
 if configNeedUpdate:
-  with open(RuningFolder+'Inmoov.config', 'wb') as f:
+  with open(RuningFolder+'config/' + '_InMoov.config', 'wb') as f:
     BasicConfig.write(f)
 
 
 # PARSE THE CONFIG FILE
 ScriptType=BasicConfig.get('MAIN', 'ScriptType')
-MyRightPort=BasicConfig.get('ARDUINO', 'MyRightPort')
-MyLeftPort=BasicConfig.get('ARDUINO', 'MyLeftPort')
-ForceArduinoIsConnected=BasicConfig.getboolean('ARDUINO', 'ForceArduinoIsConnected')
 #read personnal config
 MyvoiceTTS=BasicConfig.get('TTS', 'MyvoiceTTS')
 MyLanguage=BasicConfig.get('TTS', 'MyLanguage')
@@ -86,4 +80,3 @@ StartupSound=BasicConfig.getboolean('GENERAL', 'StartupSound')
 IuseLinux=BasicConfig.getboolean('GENERAL', 'IuseLinux')
 LaunchSwingGui=BasicConfig.getboolean('GENERAL', 'LaunchSwingGui')
 BetaVersion=BasicConfig.getboolean('GENERAL', 'BetaVersion')
-
