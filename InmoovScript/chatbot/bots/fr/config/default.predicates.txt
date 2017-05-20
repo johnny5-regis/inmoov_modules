@@ -1,11 +1,19 @@
+émotion:joie
+lui:tourner la tête
+courant:
+quoi:tourner la tête
+effet:l'heure de faire dodo
+memoriser:incomprehension de "tourner la tête" dans le contexte : HUMOUR pour "régis"
+mastercontent:incomprehension de "tourner la tête" dans le contexte : HUMOUR
+toi:tourner la tête
 particule:
 botname:johnny 5
 tmpname:
+face:sourire4
 jsenabled:true
-courant:
+oldtopic:HUMOUR
+identity:0
 firstinit:ok
 name:régis
-topic:default
+topic:HUMOUR
 questionfirstinit:
-meteo:800
-heurequestion:0
