@@ -1,19 +1,26 @@
-émotion:joie
-lui:tourner la tête
+lui:peinture le film que circuit
+émotion:tristesse
+quoi:peinture le film que circuit
+mastercontent:incomprehension de "peinture le film que circuit" dans le contexte : HUMOUR
+toi:peinture le film que circuit
+that:la bière
+tmpname:
+search:inconnu
+aurevoir:oui
+jsenabled:true
+identity:0
+oldtopic:une blague
+tmp:c est un sacré laisse tomber ça canicule qu est ce qu on mange ce soir
+questionfirstinit:
 courant:
-quoi:tourner la tête
-effet:l'heure de faire dodo
-memoriser:incomprehension de "tourner la tête" dans le contexte : HUMOUR pour "régis"
-mastercontent:incomprehension de "tourner la tête" dans le contexte : HUMOUR
-toi:tourner la tête
+cava:ok
+meteo:800
+effet:un sacré laisse tomber ça canicule qu est ce qu on mange ce soir
+memoriser:incomprehension de "peinture le film que circuit" dans le contexte : HUMOUR pour "régis"
+compteappel:
 particule:
 botname:johnny 5
-tmpname:
-face:sourire4
-jsenabled:true
-oldtopic:HUMOUR
-identity:0
+face:triste2
 firstinit:ok
 name:régis
-topic:HUMOUR
-questionfirstinit:
+topic:default
