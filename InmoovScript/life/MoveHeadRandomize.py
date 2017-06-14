@@ -3,62 +3,44 @@
 # ##############################################################################
   
 MoveHeadTimer = Runtime.start("MoveHeadTimer","Clock")
-isHeadActivated=1
-isRollNeckActivated=1
+
 def MoveHead(timedata):
- 
-  if RobotCanMoveHeadWhileSpeaking:
+
+  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsTrackingSomething():
     #redefine next loop
     MoveHeadTimer.setInterval(random.randint(200,1000))
     if isHeadActivated:
-      
+      i01.setHeadVelocity(random.randint(8,25),random.randint(8,25),random.randint(8,25))
       #wait servo last move
-      #une meme position pour les 2
-      sourcilsPos=random.uniform(30,65)
-      if not sourcilDroit.isMoving():
-        sourcilDroit.moveTo(sourcilsPos)
-        sourcilGauche.moveTo(sourcilsPos)
-      paupierePos=random.uniform(120,155)
-      if not sourcilDroit.isMoving():
-        paupiereHautGauche.moveTo(paupierePos)
-        paupiereHautDroit.moveTo(paupierePos)
-      
-      if not verinDroite.isMoving():verinDroite.moveTo(random.uniform(75,115))
-      if not verinGauche.isMoving():verinGauche.moveTo(random.uniform(70,110))
-    if isRollNeckActivated:
-      if not directionTete.isMoving():directionTete.moveTo(random.uniform(69,89))
-  else:
-    MoveHeadTimer.stopClock()
+      if not head.rothead.isMoving():head.rothead.moveTo(random.uniform(60,120))
+      if not head.neck.isMoving():head.neck.moveTo(random.uniform(60,120))
+      if not head.rollNeck.isMoving():head.rollNeck.moveTo(random.uniform(60,120))
+    else:
+      MoveHeadTimer.stopClock()
   
 #initial function
 def MoveHeadStart():
-  print "MoveHeadStart"
-
-  if RobotCanMoveHeadWhileSpeaking:
+  
+  print "moveheadstart"
+  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsTrackingSomething():
     if isHeadActivated:
-      paupiereHautGauche.setAcceleration(20)
-      paupiereHautDroit.setAcceleration(20)
-      sourcilDroit.setAcceleration(20)
-      sourcilGauche.setAcceleration(20)
-      paupiereHautDroit.enableAutoDisable(0)
-      paupiereHautGauche.enableAutoDisable(0)
-      sourcilDroit.enableAutoDisable(0)
-      sourcilGauche.enableAutoDisable(0)
-    if isRollNeckActivated:
-      directionTete.enableAutoDisable(0)
-      directionTete.setAcceleration(20)
-  else:
-    MoveHeadTimer.stopClock()
+      #head.setAcceleration(20)
+      head.enableAutoDisable(0) 
+    else:
+      MoveHeadTimer.stopClock()
     
 def MoveHeadStop():
   
-  if RobotCanMoveHeadWhileSpeaking:
-    print "stop"
-    #on remet les servo au milieu si on veut :)
+  if i01.RobotCanMoveHeadRandom and i01.RobotCanMoveRandom and not i01.RobotIsTrackingSomething():
+    if isHeadActivated:
+      head.rothead.enableAutoDisable(rotheadEnableAutoDisable)
+      head.neck.enableAutoDisable(neckEnableAutoDisable)
+      head.rollNeck.enableAutoDisable(rollneckEnableAutoDisable)
+      i01.setHeadVelocity(25,25,25)
+      i01.head.rest()
+      i01.setHeadVelocity(40,40,40)
+      
     
-    
-    
-
 MoveHeadTimer.addListener("pulse", python.name, "MoveHead")
 MoveHeadTimer.addListener("clockStarted", python.name, "MoveHeadStart")  
 MoveHeadTimer.addListener("clockStopped", python.name, "MoveHeadStop")

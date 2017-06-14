@@ -4,11 +4,11 @@
 ##						   \ \  \ \  \\ \  \ \  \\|__| \  \ \  \\\  \ \  \\\  \ \  \/  / / 
 ##						    \ \  \ \  \\ \  \ \  \    \ \  \ \  \\\  \ \  \\\  \ \    / /  
 ##						     \ \__\ \__\\ \__\ \__\    \ \__\ \_______\ \_______\ \__/ /   
-##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    script - [wip]
+##						      \|__|\|__| \|__|\|__|     \|__|\|_______|\|_______|\|__|/    OS - [wip]
 version='0.3.5'
 
 # this will run with versions of MRL above :
-mrlCompatible='1970'
+mrlCompatible='2237'
 
 # ###################################################################################
 # This is a very minimal script for Inmoov
@@ -24,14 +24,13 @@ mrlCompatible='1970'
 
 
 
-
 ##############
 # Main inmoov service declaration
 i01 = Runtime.createAndStart("i01", "InMoov")
 
 ##############
 # robot checkup and initialisation ( skeleton & services)
-RuningFolder="InmoovScript"
+RuningFolder="InMoov"
 execfile(RuningFolder+'/system/InitCheckup.py')
 
 
@@ -67,4 +66,4 @@ def fingermiddle():
 
 ##############
 #Go more further ! and code your own script in this file
-execfile(RuningFolder+'custom/Inmoov_custom.py')
+execfile(RuningFolder+'custom/InMoov_custom.py')
