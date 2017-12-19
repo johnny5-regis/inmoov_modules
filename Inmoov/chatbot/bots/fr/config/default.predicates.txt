@@ -1,26 +1,32 @@
-lui:peinture le film que circuit
-émotion:tristesse
-quoi:peinture le film que circuit
-mastercontent:incomprehension de "peinture le film que circuit" dans le contexte : HUMOUR
-toi:peinture le film que circuit
-that:la bière
+lui:regarde devant
+Ã©motion:joie
+Ã¢ge:femme 24
+gender:it
+qui:jlc
+newlang:de jeux
+quoi:regarde devant
+mastercontent:incomprehension de "regarde devant" dans le contexte : la la
+toi:regarde devant
+that:couper le jus
+lastUsername:rÃ©gisse
 tmpname:
-search:inconnu
-aurevoir:oui
+determinantinterogatif:QUI EST
+search:pourquoi
 jsenabled:true
+tmp:je ne sais pas
 identity:0
-oldtopic:une blague
-tmp:c est un sacré laisse tomber ça canicule qu est ce qu on mange ce soir
+oldtopic:default
 questionfirstinit:
 courant:
-cava:ok
-meteo:800
-effet:un sacré laisse tomber ça canicule qu est ce qu on mange ce soir
-memoriser:incomprehension de "peinture le film que circuit" dans le contexte : HUMOUR pour "régis"
-compteappel:
-particule:
+meteo:804
+memoriser:incomprehension de "regarde devant" dans le contexte : la la pour "rÃ©gis"
 botname:johnny 5
-face:triste2
+face:sourire9
+null:
+MagicCommandToWakeUp:"wake up"
 firstinit:ok
-name:régis
+name:rÃ©gis
 topic:default
+heshe:Ã§a
+articles:
+he:unknown

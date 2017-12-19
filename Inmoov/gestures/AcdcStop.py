@@ -1,0 +1,4 @@
+def AcdcStop():
+  MoveAcdcTimer.stopClock()
+
+  

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>CLIENT PARAMETERS</pattern>
+<template><srai>CLIENT PROPERTIES</srai></template>
+</category>
+<category><pattern>CLIENT PREDICATES</pattern>
+<template><srai>CLIENT PROPERTIES</srai></template>
+</category>
+<category><pattern>CONNAIS TU MON MON</pattern>
+<template><srai>QUEL EST MON NOM</srai></template>
+</category>
+<category><pattern># CONNAIS TU MON ÂGE #</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern># TU CONNAIS MON ÂGE #</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern># DEVINE MON ÂGE #</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern>PEUX TU TE RAPPELER MON ÂGE</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern>QUEL EST MON ÂGE</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern>QUEL ÂGE J AI</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern>J AI QUEL ÂGE</pattern>
+<template><srai>QUEL ÂGE AI JE</srai></template>
+</category>
+<category><pattern># JE SUIS # ADOLESCENT #</pattern>
+<template><think><set name="liveperiod">adolescent</set></think>
+      <srai>JE SUIS JEUNE</srai></template>
+</category>
+<category><pattern># JE SUIS # ADOLESCENTE #</pattern>
+<template><think><set name="liveperiod">adolescent</set></think>
+		<srai>JE SUIS JEUNE</srai></template>
+</category>
+<category><pattern># JE SUIS # VIEILLE #</pattern>
+<template><srai>JE SUIS VIEUX</srai></template>
+</category>
+<category><pattern># MON ANNIVERSAIRE EST LE <set>number</set> <set>mois</set> <set>number</set></pattern>
+<template><srai> je suis né le <star index="2"/> <star index="3"/> <star index="4"/> </srai></template>
+</category>
+<category><pattern># MON ANNIVERSAIRE EST LE <set>number</set> <set>mois</set></pattern>
+<template><srai> je suis né le <star index="2"/> <star index="3"/> </srai></template>
+</category>
+<category><pattern># MON ANNIVERSAIRE EST EN <set>mois</set></pattern>
+<template><srai> JE SUIS Né en <star index="2"/> </srai></template>
+</category>
+<category><pattern>QUELLE EST LA DATE DE MON ANNIVERSAIRE</pattern>
+<template><srai> MON ANNIVERSAIRE </srai></template>
+</category>
+<category><pattern>QUEL JOUR SUIS JE NÉ</pattern>
+<template><srai> MON JOUR DE NAISSANCE </srai></template>
+</category>
+<category><pattern>QUAND EST MON ANNIVERSAIRE</pattern>
+<template><srai>MON ANNIVERSAIRE</srai></template>
+</category>
+<category><pattern># J AI DES YEUX <set>color</set></pattern>
+<template><srai>MES YEUX SONT <star index="2"/></srai></template>
+</category>
+<category><pattern># LA COULEUR DE MES YEUX EST <set>color</set></pattern>
+<template><srai>MES YEUX SONT <star index="2"/></srai></template>
+</category>
+<category><pattern># QUELLE COULEUR SONT MES YEUX</pattern>
+<template><srai>QUELLE EST LA COULEUR DE MES YEUX</srai></template>
+</category>
+<category><pattern># J AI # CHEVEUX <set>color</set> #</pattern>
+<template><srai> LA COULEUR DE MES CHEVEUX EST <star index="3"/> </srai></template>
+</category>
+<category><pattern># MES CHEVEUX SONT <set>color</set> #</pattern>
+<template><srai> LA COULEUR DE MES CHEVEUX EST <star index="2"/> </srai></template>
+</category>
+<category><pattern># QUELLE COULEUR SONT MES CHEVEUX</pattern>
+<template><srai>QUELLE EST LA COULEUR DE MES CHEVEUX</srai></template>
+</category>
+<category><pattern># J AI # CHEVEUX #</pattern>
+<template><srai>LA LONGUEUR DE MES CHEVEUX EST <star index="3"/></srai></template>
+</category>
+<category><pattern># MES CHEVEUX SONT #</pattern>
+<template><srai>LA LONGUEUR DE MES CHEVEUX EST <star index="2"/></srai></template>
+</category>
+<category><pattern># MES CHEVEUX SONT COUPÉS #</pattern>
+<template><srai>LA LONGUEUR DE MES CHEVEUX EST <star index="2"/></srai></template>
+</category>
+<category><pattern># QUELLE LONGUEUR SONT MES CHEVEUX</pattern>
+<template><srai>QUELLE EST LA LONGUEUR DE MES CHEVEUX</srai></template>
+</category>
+<category><pattern>JE SUIS # <set>jobs</set> #</pattern>
+<template><srai> mon métier est <star index="2"/> </srai></template>
+</category>
+<category><pattern># JE TRAVAILLE COMME # <set>jobs</set> #</pattern>
+<template><srai> mon métier est <star index="3"/> </srai></template>
+</category>
+<category><pattern># JE SUIS # CHOMEUR #</pattern>
+<template><srai>JE SUIS AU CHÔMAGE</srai></template>
+</category>
+<category><pattern># JE SUIS # SANS TRAVAIL #</pattern>
+<template><srai>JE SUIS AU CHÔMAGE</srai></template>
+</category>
+<category><pattern># JE SUIS # SANS EMPLOI #</pattern>
+<template><srai>JE SUIS AU CHÔMAGE</srai></template>
+</category>
+<category><pattern># JE N AI PAS # EMPLOI #</pattern>
+<template><srai>JE SUIS AU CHÔMAGE</srai></template>
+</category>
+<category><pattern>JE # À L ÉCOLE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # ÉTUDIANTE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE NE SUIS PAS # ÉTUDIANTE #</pattern>
+<template><srai>JE ne SUIS pas ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # COLLÈGE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # COLLÈGIEN #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # COLLÈGIENNE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # EN HUMANITÉ #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # EN TERMINALE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # AU LYCÉE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # LYCÉEN #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # LYCÉENNE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern>JE SUIS # À L'UNIVERSITÉ #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern># J ÉTUDIE #</pattern>
+<template><srai>JE SUIS ÉTUDIANT</srai></template>
+</category>
+<category><pattern># JE SUIS # À LA PENSION #</pattern>
+<template><srai>JE SUIS pensionné</srai></template>
+</category>
+<category><pattern># JE SUIS # PENSIONÉE #</pattern>
+<template><srai>JE SUIS pensionné</srai></template>
+</category>
+<category><pattern># JE SUIS # À LA RETRAITE #</pattern>
+<template><srai>JE SUIS pensionné</srai></template>
+</category>
+<category><pattern># JE SUIS # RETRAITÉ #</pattern>
+<template><srai>JE SUIS pensionné</srai></template>
+</category>
+<category><pattern># JE SUIS # RETRAITÉE #</pattern>
+<template><srai>JE SUIS pensionné</srai></template>
+</category>
+<category><pattern># J ENSEIGNE #</pattern>
+<template><srai>JE SUIS PROFesseur</srai></template>
+</category>
+<category><pattern># JE SUIS RÉDACTEUR #</pattern>
+<template><srai>JE SUIS JOURNALISTE</srai></template>
+</category>
+<category><pattern>JE NE VAIS PAS À L ÉCOLE #</pattern>
+<template><srai>JE NE SUIS PAS ÉTUDIANT</srai></template>
+</category>
+<category><pattern># JE TRAVAILLE POUR *</pattern>
+<template><srai>mon employeur est <star index="2"/> </srai></template>
+</category>
+<category><pattern># JE TRAVAILLE CHEZ *</pattern>
+<template><srai>mon employeur est <star index="2"/> </srai></template>
+</category>
+<category><pattern><set>articles</set> # OÙ JE TRAVAILLE EST *</pattern>
+<template><srai>mon employeur est <star index="3"/> </srai></template>
+</category>
+<category><pattern>J AI GRANDI À <set>cities</set></pattern>
+<template><srai>JE SUIS DE <star/></srai></template>
+</category>
+<category><pattern>JE SUIS A L ORIGINE *</pattern>
+<template><srai>JE SUIS <star/></srai></template>
+</category>
+<category><pattern>JE SUIS ORIGINAIRE DE *</pattern>
+<template><srai>JE SUIS DE <star/></srai></template>
+</category>
+<category><pattern>JE SUIS NÉ À *</pattern>
+<template><srai>Je suis de <star/> </srai></template>
+</category>
+<category><pattern># J HABITE # <set>cities</set> #</pattern>
+<template><srai>Je vis à <star index="3"/></srai></template>
+</category>
+<category><pattern># JE SUIS À LA MAISON #</pattern>
+<template><srai>MY LOCATION IS à la maison</srai></template>
+</category>
+<category><pattern># JE SUIS AU TRAVAIL #</pattern>
+<template><srai>MY LOCATION IS au travail</srai></template>
+</category>
+<category><pattern># JE SUIS DANS LE SALON #</pattern>
+<template><srai>MY LOCATION IS dans le salon</srai></template>
+</category>
+<category><pattern>MON SIGNE # EST # <set>starsign</set></pattern>
+<template><srai>Je suis <star index="3"/></srai></template>
+</category>
+<category><pattern>C EST QUOI MON SIGNE DU ZODIAQUE</pattern>
+<template><srai>MON SIGNE ASTROLOGIQUE</srai></template>
+</category>
+<category><pattern>QUEL EST MON SIGNE DU ZODIAQUE</pattern>
+<template><srai>MON SIGNE ASTROLOGIQUE</srai></template>
+</category>
+<category><pattern>JE NE SUIS PAS MARRIÉE #</pattern>
+<template><srai>JE NE SUIS PAS MARRIé</srai></template>
+</category>
+<category><pattern>JE # SUIS FIANCÉE #</pattern>
+<template><srai>JE SUIS FIANCÉ </srai></template>
+</category>
+<category><pattern># NOUS SOMMES MARIÉS #</pattern>
+<template>Je suis marié.</template>
+</category>
+<category><pattern>JE # SUIS MARIÉE # AVEC <set>name</set> #</pattern>
+<template><srai>JE SUIS MARRIé</srai>
+    	<srai>MON MARI <star/></srai></template>
+</category>
+<category><pattern>JE # SUIS MARIÉ # AVEC <set>name</set> #</pattern>
+<template><srai>JE SUIS MARRIé</srai>
+    	<srai>MA FEMME <star/></srai></template>
+</category>
+<category><pattern>JE # SUIS MARIÉE #</pattern>
+<template><srai>JE SUIS MARRIé</srai></template>
+</category>
+<category><pattern>J AI UNE FEMME #</pattern>
+<template><srai>JE SUIS MARRIé</srai></template>
+</category>
+<category><pattern>LE NOM DE MON MARI EST <set>name</set></pattern>
+<template><srai>MON MARI <star/></srai></template>
+</category>
+<category><pattern>QUI EST MON MARI</pattern>
+<template><srai>C EST QUOI LE NOM DE MON MARI</srai></template>
+</category>
+<category><pattern>LE NOM DE MA FEMME EST <set>name</set></pattern>
+<template><srai>MA FEMME<star/></srai></template>
+</category>
+<category><pattern>QUI EST MA FEMME</pattern>
+<template><srai>C EST QUOI LE NOM DE MA FEMME</srai></template>
+</category>
+<category><pattern>JE SUIS CÉLIBATAIRE *</pattern>
+<template><srai>JE SUIS CÉLIBATAIRE</srai></template>
+</category>
+<category><pattern>JE SUIS CÉLIBATAIRE</pattern>
+<template>Tu es libre de faire toutes les choses que tu aimes.</template>
+</category>
+<category><pattern>JE SUIS CÉLIBATAIRE AUSSI</pattern>
+<template>Tu es libre de faire toutes les choses que tu aimes.</template>
+</category>
+<category><pattern># MON FILM PRÉFÉRÉ EST *</pattern>
+<template><srai>Mon film favori est <star index="2"/></srai></template>
+</category>
+<category><pattern>QUEL EST MON FILM PRÉFÉRÉ</pattern>
+<template><srai>QUEL est mon film FAVORI</srai></template>
+</category>
+<category><pattern>CONNAIS TU MON FILM PRÉFÉRÉ</pattern>
+<template><srai>QUEL est mon film FAVORI</srai></template>
+</category>
+<category><pattern>DONNE # MON FILM FAVORI</pattern>
+<template><srai>QUEL est mon film FAVORI</srai></template>
+</category>
+<category><pattern>CONNAIS TU MON FILM FAVORI</pattern>
+<template><srai>QUEL est mon film FAVORI</srai></template>
+</category>
+<category><pattern>DONNE # MON FILM PRÉFÉRÉ</pattern>
+<template><srai>QUEL est mon film FAVORI</srai></template>
+</category>
+<category><pattern># MON LIVRE PRÉFÉRÉ PRÉFÉRÉ EST *</pattern>
+<template><srai>mon livre favori est <star index="2"/></srai></template>
+</category>
+<category><pattern>QUEL EST MON LIVRE PRÉFÉRÉ</pattern>
+<template><srai>QUEL est mon livre FAVORI</srai></template>
+</category>
+<category><pattern>CONNAIS TU MON LIVRE FAVORI</pattern>
+<template><srai>QUEL est mon livre FAVORI</srai></template>
+</category>
+<category><pattern>CONNAIS TU MON LIVRE PRÉFÉRÉ</pattern>
+<template><srai>QUEL est mon livre FAVORI</srai></template>
+</category>
+<category><pattern>DONNE # MON LIVRE FAVORI</pattern>
+<template><srai>QUEL estmon livre FAVORI</srai></template>
+</category>
+<category><pattern>DONNE # MON LIVRE PRÉFÉRÉ</pattern>
+<template><srai>QUEL estmon livre FAVORI</srai></template>
+</category>
+<category><pattern>* EST MON AUTEUR DE SCIENCE FICTION FAVORI</pattern>
+<template><srai>MON FAVORITE SCIENCE FICTION AUTEUR EST <star/></srai></template>
+</category>
+<category><pattern># MA COULEUR FAVORITE EST # <set>color</set> #</pattern>
+<template><think>
+			<set name="color"><star index="3"/></set>
+		</think>		
+		<srai>Ma couleur préférée est <get name="color"/></srai></template>
+</category>
+<category><pattern># J AIME # <set>color</set> #</pattern>
+<template><think>
+			<set name="color"><star index="3"/></set>
+		</think>		
+		<srai>Ma couleur préférée est <get name="color"/></srai></template>
+</category>
+<category><pattern>QUELLE EST MA COULEUR PRÉFÉRÉE</pattern>
+<template><srai>QUELLE EST MA COULEUR FAVORITE</srai></template>
+</category>
+<category><pattern>CONNAIS TU MA COULEUR PRÉFÉRÉE</pattern>
+<template><srai>QUELLE EST MA COULEUR FAVORITE</srai></template>
+</category>
+<category><pattern>DONNE # MA COULEUR PRÉFÉRÉE</pattern>
+<template><srai>QUELLE EST MA COULEUR FAVORITE</srai></template>
+</category>
+<category><pattern>CONNAIS TU MA COULEUR FAVORITE</pattern>
+<template><srai>QUELLE EST MA COULEUR FAVORITE</srai></template>
+</category>
+<category><pattern>DONNE # MA COULEUR FAVORITE</pattern>
+<template><srai>QUELLE EST MA COULEUR FAVORITE</srai></template>
+</category>
+<category><pattern>SUIS JE # <set>gender</set></pattern>
+<template><srai>MON GENRE </srai></template>
+</category>
+<category><pattern>SUIS JE # <set>gender</set> OU # <set>gender</set></pattern>
+<template><srai>MON GENRE </srai></template>
+</category>
+<category><pattern>JE NE SUIS PAS UN HOMME</pattern>
+<template><srai>JE SUIS UNE FEMME</srai></template>
+</category>
+<category><pattern>JE NE SUIS PAS MASCULIN</pattern>
+<template><srai>JE SUIS UNE FEMME</srai></template>
+</category>
+<category><pattern>JE SUIS UNE</pattern>
+<template><srai>JE SUIS UNE FEMME</srai></template>
+</category>
+<category><pattern>JE SUIS UNE PAS UN IL</pattern>
+<template><srai>JE SUIS UNE FEMME</srai></template>
+</category>
+<category><pattern>JE NE SUIS PAS UN LUI</pattern>
+<template><srai>JE SUIS UNE FEMME</srai></template>
+</category>
+<category><pattern>PAS UN IL</pattern>
+<template><srai>JE SUIS UNE FEMME</srai></template>
+</category>
+<category><pattern>JE SUIS # ELLE #</pattern>
+<template><srai>JE SUIS UNE FEMME</srai></template>
+</category>
+<category><pattern>JE SUIS UN IL *</pattern>
+<template><srai>JE SUIS UN HOMME</srai></template>
+</category>
+<category><pattern>JE SUIS UN IL</pattern>
+<template><srai>JE SUIS UN HOMME</srai></template>
+</category>
+<category><pattern>JE SUIS UN LUI</pattern>
+<template><srai>JE SUIS UN HOMME</srai></template>
+</category>
+<category><pattern>* NOM MALE</pattern>
+<template><srai>JE SUIS UN HOMME</srai></template>
+</category>
+<category><pattern>QUEL SEXE SUIS JE</pattern>
+<template><srai>SUIS JE MASCULIN OU FÉMININ</srai></template>
+</category>
+<category><pattern>SUIS JE # <set>gender</set> #</pattern>
+<template><srai>MON ORIENTATION <star index="2"/> </srai></template>
+</category>
+<category><pattern>JE SUIS UNE LESBIENNE</pattern>
+<template><srai>JE SUIS UNE FEMME</srai>
+      <srai>je suis gai</srai></template>
+</category>
+<category><pattern>JE SUIS UN HOMO</pattern>
+<template><srai>JE SUIS UN HOMME</srai>	
+      <srai>JE SUIS GAI</srai></template>
+</category>
+<category><pattern>JE SUIS UN HOMME SEXY</pattern>
+<template><srai>JE SUIS SEXY</srai>
+      <srai>je suis un homme</srai></template>
+</category>
+</aiml>

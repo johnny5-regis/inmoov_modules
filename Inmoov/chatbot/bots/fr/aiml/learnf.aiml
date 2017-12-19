@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern># EST CE QUE ILS BOUGENT EN MÊME TEMPS LÀ LES VERRAS EST PAUPIÈRE POMPIER</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE TON CAHIER DE LECTURE EST AGENCE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE D ACCORD C EST QUE JE PARLAIS À CÔTÉ</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE QUI EST JOHNNY 5</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE LA MÉTÉO SUR PARIS EST 1 2 3 4 5 6 7 8</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE LA HAUTEUR DU MONT BLANC EST 4816 M</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE JOHNNY 5 EST UN ROBOT</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE LE PERSONNAGE PRINCIPAL DE CE EST OUI IL Y A DES QUESTIONS DANS LE 15E</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE ÇA BOUGE PAS EST ARRÊTE DE ME REGARDER</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE J5 EST C'EST UN ROBOT</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE UNKNOWN FILMS COURT CIRCUIT EST CONNAIS TU LE FILM AU CIRCUIT</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE UNKNOWN MAËLYS EST LA FILLE DE RÉGIS</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE UNKNOWN RACHEL EST UN ROBOT</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern># EST CE QUE UNKNOWN ÉMILIE EST LA FEMME DE RÉGIS</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern>QUI EST C'EST UN ROBOT</pattern>
+<template>Cela peut être j5 par exemple.</template>
+</category>
+<category><pattern>QUI EST OUI IL Y A DES QUESTIONS DANS LE 15E</pattern>
+<template>Cela peut être le personnage principal de ce par exemple.</template>
+</category>
+<category><pattern>QUI EST JAUNE I 5</pattern>
+<template>johnny 5.</template>
+</category>
+<category><pattern>QUI EST QUI</pattern>
+<template>johnny 5.</template>
+</category>
+<category><pattern>QUI EST J5</pattern>
+<template>c'est un robot.</template>
+</category>
+<category><pattern>QUI EST LA FEMME DE RÉGIS</pattern>
+<template>Cela peut être unknown émilie par exemple.</template>
+</category>
+<category><pattern>QUI EST LA FILLE DE RÉGIS</pattern>
+<template>Cela peut être unknown maëlys par exemple.</template>
+</category>
+<category><pattern>QUI EST JOHNNY 5</pattern>
+<template>Cela peut être qui par exemple.</template>
+</category>
+<category><pattern>QUI EST LE PERSONNAGE PRINCIPAL DE CE</pattern>
+<template>oui il y a des questions dans le 15e.</template>
+</category>
+<category><pattern>QUI EST MAËLYS</pattern>
+<template>la fille de régis.</template>
+</category>
+<category><pattern>QUI EST UNKNOWN MAËLYS</pattern>
+<template>la fille de régis.</template>
+</category>
+<category><pattern>QUI EST UNKNOWN RACHEL</pattern>
+<template>un robot.</template>
+</category>
+<category><pattern>QUI EST UNKNOWN ÉMILIE</pattern>
+<template>la femme de régis.</template>
+</category>
+<category><pattern>QUI EST RACHEL</pattern>
+<template>un robot.</template>
+</category>
+<category><pattern>QUI EST ÉMILIE</pattern>
+<template>la femme de régis.</template>
+</category>
+<category><pattern>QU EST CE QUE QUE JE PARLAIS À CÔTÉ</pattern>
+<template>Cela peut être d accord c par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE CONNAIS TU LE FILM AU CIRCUIT</pattern>
+<template>Cela peut être unknown films court circuit par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE IL S EST VIDÉ TON MACHIN LÀ</pattern>
+<template>que je parlais à côté.</template>
+</category>
+<category><pattern>QU EST CE QUE D ACCORD C</pattern>
+<template>que je parlais à côté.</template>
+</category>
+<category><pattern>QU EST CE QUE AGENCE</pattern>
+<template>Cela peut être ton cahier de lecture par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE MÉTÉO SUR PARIS</pattern>
+<template>1 2 3 4 5 6 7 8.</template>
+</category>
+<category><pattern>QU EST CE QUE HAUTEUR DU MONT BLANC</pattern>
+<template>4816 m.</template>
+</category>
+<category><pattern>QU EST CE QUE ARRÊTE DE ME REGARDER</pattern>
+<template>Cela peut être ça bouge pas par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE ILS BOUGENT EN MÊME TEMPS LÀ LES VERRAS</pattern>
+<template>paupière pompier.</template>
+</category>
+<category><pattern>QU EST CE QUE 4816 M</pattern>
+<template>Cela peut être la hauteur du mont blanc par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE 1 2 3 4 5 6 7 8</pattern>
+<template>Cela peut être la météo sur paris par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE TON CAHIER DE LECTURE</pattern>
+<template>agence.</template>
+</category>
+<category><pattern>QU EST CE QUE FILMS COURT CIRCUIT</pattern>
+<template>connais tu le film au circuit.</template>
+</category>
+<category><pattern>QU EST CE QUE PAUPIÈRE POMPIER</pattern>
+<template>Cela peut être ils bougent en même temps là les verras par exemple.</template>
+</category>
+<category><pattern>QU EST CE QUE LA MÉTÉO SUR PARIS</pattern>
+<template>1 2 3 4 5 6 7 8.</template>
+</category>
+<category><pattern>QU EST CE QUE LA HAUTEUR DU MONT BLANC</pattern>
+<template>4816 m.</template>
+</category>
+<category><pattern>QU EST CE QUE ÇA BOUGE PAS</pattern>
+<template>arrête de me regarder.</template>
+</category>
+<category><pattern>QU EST CE QUE UNKNOWN FILMS COURT CIRCUIT</pattern>
+<template>connais tu le film au circuit.</template>
+</category>
+<category><pattern>QUI EST LA MÈRE</pattern>
+<template>un truc.</template>
+</category>
+<category><pattern>QUI EST UNKNOWN LA MÈRE</pattern>
+<template>un truc.</template>
+</category>
+<category><pattern>QUI EST UN TRUC</pattern>
+<template>Cela peut être unknown la mère par exemple.</template>
+</category>
+<category><pattern># EST CE QUE UNKNOWN LA MÈRE EST UN TRUC</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern>QU EST CE QUE METEO</pattern>
+<template>connais tu la meteo.</template>
+</category>
+<category><pattern>QU EST CE QUE LA METEO</pattern>
+<template>connais tu la meteo.</template>
+</category>
+<category><pattern>QU EST CE QUE CONNAIS TU LA METEO</pattern>
+<template>Cela peut être la meteo par exemple.</template>
+</category>
+<category><pattern># EST CE QUE LA METEO EST CONNAIS TU LA METEO</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern>QUI EST EMMANUEL MACRON</pattern>
+<template>connais tu waal e.</template>
+</category>
+<category><pattern>QUI EST UNKNOWN EMMANUEL MACRON</pattern>
+<template>connais tu waal e.</template>
+</category>
+<category><pattern>QUI EST CONNAIS TU WAAL E</pattern>
+<template>Cela peut être unknown emmanuel macron par exemple.</template>
+</category>
+<category><pattern># EST CE QUE UNKNOWN EMMANUEL MACRON EST CONNAIS TU WAAL E</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern>QU EST CE QUE BLAGUE</pattern>
+<template>raconte moi une blague.</template>
+</category>
+<category><pattern>QU EST CE QUE RACONTE MOI UNE BLAGUE</pattern>
+<template>Cela peut être BLAGUE par exemple.</template>
+</category>
+<category><pattern># EST CE QUE BLAGUE EST RACONTE MOI UNE BLAGUE</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+</aiml>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>QUE VEUX TU RAJOUTER</pattern>
+<template><random>
+			  <li>merci de m'avoir aidé a grandir. à bientôt pour de nouvelles aventures</li>
+		</random></template>
+</category>
+</aiml>

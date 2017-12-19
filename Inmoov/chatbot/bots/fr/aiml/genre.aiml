@@ -1,11 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!--  -->
-  <!--  -->
-  <category>
-    <pattern>CHERCHERGENRE</pattern>
-    <template>
-      <think>
+<!--  -->
+<!--  -->
+<category><pattern>CHERCHERGENRE</pattern>
+<template><think>
         <set name="gender">
           <condition name="name">
             <li value="aaron">male</li>
@@ -217,6 +215,13 @@
             <li value="ric">male</li>
             <li value="richard">male</li>
             <li value="robert">male</li>
+            <li value="rachel">female</li>
+            <li value="newton">male</li>
+            <li value="jarvis">male</li>
+            <li value="missmoov">female</li>
+            <li value="ash">male</li>
+            <li value="johnny 5">male</li>
+            <li value="inmoov">male</li>
             <li value="rose">female</li>
             <li value="rosie">female</li>
             <li value="sally">female</li>
@@ -257,16 +262,13 @@
           </condition>
         </set>
         <set name="gender">
-          <get name="gender" />
+          <get name="gender"/>
         </set>
       </think>
-      <srai>SETHESHE</srai>
-    </template>
-  </category>
-  <category>
-    <pattern>SETHESHE</pattern>
-    <template>
-      <condition name="gender">
+      <srai>SETHESHE</srai></template>
+</category>
+<category><pattern>SETHESHE</pattern>
+<template><condition name="gender">
         <li value="male">
           <think>
             <set name="heshe">il</set>
@@ -281,7 +283,6 @@
           <think>
             <set name="heshe">ça</set>
           </think>ES tu un homme ou une femme? </li>
-      </condition>
-    </template>
-  </category>
+      </condition></template>
+</category>
 </aiml>

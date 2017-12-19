@@ -1,187 +1,95 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-  <!--  -->
-  <!--  -->
-  <category>
-    <pattern>ouvre les yeux</pattern>
-	<template>
-			<oob>
+<!--  -->
+<!--  -->
+<category><pattern>OUVRE LES YEUX</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>paupiereOuvre()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-  <category>
-    <pattern>ferme les yeux</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>FERME LES YEUX</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>paupiereFerme()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-   <category>
-    <pattern>bouge les sourcils</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>BOUGE LES SOURCILS</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>monteSourcil()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-  
-  <category>
-    <pattern>baisse les sourcils</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>BAISSE LES SOURCILS</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>baisseSourcil()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-
-  <category>
-    <pattern>regarde à droite</pattern>
-	<template>
-			<oob>
-			  <mrl>
-				<service>python</service>
-				<method>exec</method>
-				<param>regardDroit()</param>
-			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-  <category>
-    <pattern>regarde à gauche</pattern>
-	<template>
-			<oob>
-			  <mrl>
-				<service>python</service>
-				<method>exec</method>
-				<param>regardGauche()</param>
-			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-  <category>
-    <pattern>regarde à devant</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>REGARDE À DEVANT</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>regardDevant()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-   <category>
-    <pattern>lève la tête</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>LÈVE LA TÊTE</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>hautTete()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-   <category>
-    <pattern>baisse la tête</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>BAISSE LA TÊTE</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>basTete()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-       <category>
-    <pattern>tourner la tête à gauche</pattern>
-	<template>
-			<oob>
-			  <mrl>
-				<service>python</service>
-				<method>exec</method>
-				<param>teteGauche()</param>
-			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-         <category>
-    <pattern>tourner la tête à droite</pattern>
-	<template>
-			<oob>
-			  <mrl>
-				<service>python</service>
-				<method>exec</method>
-				<param>teteDroite()</param>
-			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-           <category>
-    <pattern>repositionne la tête</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>REPOSITIONNE LA TÊTE</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>teteMilieu()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-            <category>
-    <pattern>incline la tête à droite</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>INCLINE LA TÊTE À DROITE</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>inclineDroite()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
-              <category>
-    <pattern>incline la tête à gauche</pattern>
-	<template>
-			<oob>
+			</oob></template>
+</category>
+<category><pattern>INCLINE LA TÊTE À GAUCHE</pattern>
+<template><oob>
 			  <mrl>
 				<service>python</service>
 				<method>exec</method>
 				<param>inclineGauche()</param>
 			  </mrl>
-			</oob>
-	</template>
-  </category>
-  
+			</oob></template>
+</category>
 </aiml>

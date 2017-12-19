@@ -8,51 +8,34 @@ def MoveBody(timedata):
 
   if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
   
-    if (ScriptType=="Full" or ScriptType=="Virtual"):
-      #redefine next loop
-      MoveBodyTimer.setInterval(random.randint(1000,5000))
-      i01.setHandVelocity("left", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
-      i01.setHandVelocity("right", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
-      i01.setArmVelocity("left", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
-      i01.setArmVelocity("right", random.randint(8,25), random.randint(8,25), random.randint(8,25), random.randint(8,25))
-      i01.setTorsoVelocity(random.randint(8,25), random.randint(8,25), random.randint(8,25))
-      if not leftHand.thumb.isMoving():leftHand.thumb.moveTo(random.uniform(0,180))
-      if not leftHand.index.isMoving():leftHand.index.moveTo(random.uniform(0,180))
-      if not leftHand.majeure.isMoving():leftHand.majeure.moveTo(random.uniform(0,180))
-      if not leftHand.ringFinger.isMoving():leftHand.ringFinger.moveTo(random.uniform(0,180))
-      if not leftHand.pinky.isMoving():leftHand.pinky.moveTo(random.uniform(0,180))
-      if not leftHand.wrist.isMoving():leftHand.wrist.moveTo(random.uniform(0,180))
-      if not rightHand.thumb.isMoving():rightHand.thumb.moveTo(random.uniform(0,180))
-      if not rightHand.index.isMoving():rightHand.index.moveTo(random.uniform(0,180))
-      if not rightHand.majeure.isMoving():rightHand.majeure.moveTo(random.uniform(0,180))
-      if not rightHand.ringFinger.isMoving():rightHand.ringFinger.moveTo(random.uniform(0,180))
-      if not rightHand.pinky.isMoving():rightHand.pinky.moveTo(random.uniform(0,180))
-      if not rightHand.wrist.isMoving():rightHand.wrist.moveTo(random.uniform(0,180))
-      if not leftArm.bicep.isMoving():leftArm.bicep.moveTo(random.uniform(0,30))
-      if not leftArm.shoulder.isMoving():leftArm.shoulder.moveTo(random.uniform(10,50))
-      if not leftArm.rotate.isMoving():leftArm.rotate.moveTo(random.uniform(60,120))
-      if not leftArm.omoplate.isMoving():leftArm.omoplate.moveTo(random.uniform(0,40))
-      if not rightArm.bicep.isMoving():rightArm.bicep.moveTo(random.uniform(0,30))
-      if not rightArm.shoulder.isMoving():rightArm.shoulder.moveTo(random.uniform(10,50))
-      if not rightArm.rotate.isMoving():rightArm.rotate.moveTo(random.uniform(60,120))
-      if not rightArm.omoplate.isMoving():rightArm.omoplate.moveTo(random.uniform(0,40))
-      if not torso.topStom.isMoving():torso.topStom.moveTo(random.uniform(80,110))
-      if not torso.midStom.isMoving():torso.midStom.moveTo(random.uniform(80,110))
+   
+    #redefine next loop
+    MoveBodyTimer.setInterval(random.randint(1000,5000))
+    epauleGauche.setVelocity(random.randint(15,25))
+    epauleDroit.setVelocity(random.randint(15,25))
+    brasGauche.setVelocity(random.randint(15,35))
+    brasDroit.setVelocity(random.randint(15,35))
+    HomoplatetDroit.setVelocity(random.randint(15,20))
+    HomoplateGauche.setVelocity(random.randint(15,20))
+    PoignetGauche.setVelocity(random.randint(60,100))
+    MainGauche.setVelocity(random.randint(60,100))
+    MainDroit.setVelocity(random.randint(60,100))
+    PoignetDroit.setVelocity(random.randint(60,100))
+    if not epauleGauche.isMoving():epauleGauche.moveTo(random.uniform(20,120))
+    if not epauleDroit.isMoving():epauleDroit.moveTo(random.uniform(50,150))
+    if not brasGauche.isMoving():brasGauche.moveTo(random.uniform(40,100))
+    if not brasDroit.isMoving():brasDroit.moveTo(random.uniform(40,100))
+    if not HomoplatetDroit.isMoving():HomoplatetDroit.moveTo(random.uniform(0,180))
+    if not HomoplateGauche.isMoving():HomoplateGauche.moveTo(random.uniform(0,180))
+    if not PoignetGauche.isMoving():PoignetGauche.moveTo(random.uniform(0,180))
+    if not MainGauche.isMoving():MainGauche.moveTo(random.uniform(0,130))
+    if not MainDroit.isMoving():MainDroit.moveTo(random.uniform(180,50))
+    if not PoignetDroit.isMoving():PoignetDroit.moveTo(random.uniform(80,180))
 
-    else:
-      MoveBodyTimer.stopClock()
+
+  else:
+    MoveBodyTimer.stopClock()
   
-#initial function
-def MoveBodyStart():
-  
-  if i01.RobotCanMoveRandom and i01.RobotCanMoveBodyRandom and not i01.RobotIsSleeping and not i01.RobotIsTrackingSomething():
-  
-    if (ScriptType=="Full" or ScriptType=="Virtual"):
-      print "MoveBodyStart"
-        #head.setAcceleration(20)
-        #head.enableAutoDisable(0) 
-    else:
-      MoveBodyTimer.stopClock()
     
 def MoveBodyStopped():
   
@@ -60,9 +43,6 @@ def MoveBodyStopped():
   
     if (ScriptType=="Full" or ScriptType=="Virtual"):
       print "MoveBodyStopped"
-      i01.halfSpeed()
-      i01.rest()  
 
 MoveBodyTimer.addListener("pulse", python.name, "MoveBody")
-MoveBodyTimer.addListener("clockStarted", python.name, "MoveBodyStart")  
 MoveBodyTimer.addListener("clockStopped", python.name, "MoveBodyStopped")

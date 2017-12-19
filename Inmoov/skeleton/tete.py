@@ -1,14 +1,23 @@
+# -- coding: utf-8 --
 # ##############################################################################
-#						*** RIGHT HAND ***
+#            *** RIGHT HAND ***
 # ##############################################################################
 
 # rotationCylindre------pin 46
 # berceau------pin 49
 
  
-  
+isHeadActivated=1
+isEyeLidsActivated=0
+isLeftArmActivated=1
+isLeftHandActivated=1
+isRightArmActivated=1
+isRightHandActivated=1
+isTorsoActivated=1
+
+
 # ##############################################################################
-# 							PERSONNAL PARAMETERS
+#               PERSONNAL PARAMETERS
 # ##############################################################################  
 isTete=0
 #read current skeleton part config
@@ -25,76 +34,89 @@ autoDetach=ThisSkeletonPartConfig.getboolean('MAIN', 'autoDetach')
   
   
 # ##############################################################################
-# 								SERVO FUNCTIONS
+#                 SERVO FUNCTIONS
 # ##############################################################################
 
 if isTete==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
 
-	TeteArduinoIsconnected=0
-	
-	try:
-		
-		
-		if TeteArduino=="left":
-			TeteArduinoIsconnected=LeftPortIsConnected
-		if TeteArduino=="right":
-			TeteArduinoIsconnected=RightPortIsConnected
-		TeteArduino=eval(TeteArduino)
-	except:
-		errorSpokenFunc('BAdrduinoChoosen',', tete')
-		isTete=0
-		pass	
-	
+  TeteArduinoIsconnected=0
+  
+  try:
+    
+    
+    if TeteArduino=="left":
+      TeteArduinoIsconnected=LeftPortIsConnected
+    if TeteArduino=="right":
+      TeteArduinoIsconnected=RightPortIsConnected
+    TeteArduino=eval(TeteArduino)
+  except:
+    errorSpokenFunc('BAdrduinoChoosen',', tete')
+    isTete=0
+    pass  
 
-	if TeteArduinoIsconnected:
-		
-		#on declare le servo
-		directionTete = Runtime.create("directionTete", "Servo")
-		directionTete.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'directionTete'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'directionTete')) 
-		directionTete.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'directionTete'))
-		directionTete.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'directionTete'))
-		directionTete = Runtime.start("directionTete","Servo")
-		# servo.attach(ARDUINO, PIN)
-	
-		verinGauche = Runtime.create("verinGauche", "Servo")
-		verinGauche.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'verinGauche'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'verinGauche')) 
-		verinGauche.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'verinGauche'))
-		verinGauche.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'verinGauche'))
-		verinGauche = Runtime.start("verinGauche","Servo")
-		# servo.attach(ARDUINO, PIN)
-		
-		
-		verinDroite = Runtime.create("verinDroite", "Servo")
-		verinDroite.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'verinDroite'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'verinDroite')) 
-		verinDroite.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'verinDroite'))
-		verinDroite.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'verinDroite'))
-		verinDroite = Runtime.start("verinDroite","Servo")
-		# servo.attach(ARDUINO, PIN)		
-		verinGauche.enableAutoAttach(1)
-		verinDroite.enableAutoAttach(1)
-		directionTete.enableAutoAttach(1)
-		verinGauche.enableAutoDetach(0)
-		verinDroite.enableAutoDetach(0)
-		directionTete.enableAutoDetach(0)
-		verinDroite.attach(TeteArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'verinDroite'))
-		verinGauche.attach(TeteArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'verinGauche'))	
-		directionTete.attach(TeteArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'directionTete'))
-		
-			
-		
-	
-			
-		#position repos
-		verinGauche.rest()
-		verinDroite.rest()
-		directionTete.rest()
-		
-		#on detache pour pas que ca brule !
-		#rotationCylindre.detach()
-		#berceau.detach()
-		
-	else:
-		#we force parameter if arduino is off
-		isTete=0
-		
-#todo set inverted
+  if TeteArduinoIsconnected:    
+    #on declare le servo
+    directionTete = Runtime.create("directionTete", "Servo")
+    directionTete.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'directionTete'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'directionTete')) 
+    directionTete.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'directionTete'))
+    directionTete.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'directionTete'))
+    directionTete = Runtime.start("directionTete","Servo")
+    # servo.attach(ARDUINO, PIN)
+  
+    verinGauche = Runtime.create("verinGauche", "Servo")
+    verinGauche.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'verinGauche'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'verinGauche')) 
+    verinGauche.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'verinGauche'))
+    verinGauche.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'verinGauche'))
+    verinGauche = Runtime.start("verinGauche","Servo")
+    # servo.attach(ARDUINO, PIN)
+    
+    
+    verinDroite = Runtime.create("verinDroite", "Servo")
+    verinDroite.map(0,180,ThisSkeletonPartConfig.getint('SERVO_MINIMUM', 'verinDroite'),ThisSkeletonPartConfig.getint('SERVO_MAXIMUM', 'verinDroite')) 
+    verinDroite.setVelocity(ThisSkeletonPartConfig.getint('DEF_SPEED', 'verinDroite'))
+    verinDroite.setRest(ThisSkeletonPartConfig.getint('SERVO_MAP_REST', 'verinDroite'))
+    verinDroite = Runtime.start("verinDroite","Servo")
+    verinDroite.attach(TeteArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'verinDroite'))
+    verinGauche.attach(TeteArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'verinGauche'))  
+    directionTete.attach(TeteArduino, ThisSkeletonPartConfig.getint('SERVO_PIN', 'directionTete'))
+    # servo.attach(ARDUINO, PIN)    
+    verinGauche.setAutoDisable(True)
+    verinDroite.setAutoDisable(True)
+    directionTete.setInverted(True)
+    directionTete.setAutoDisable(True)
+    
+    
+    # déclaration d'un servo virtuel+arduino
+    
+    virtualServoControllerVirtual = Runtime.start("virtualServoControllerVirtual", "VirtualArduino")
+    virtualServoControllerVirtual.connect("COM42")
+    virtualServoController = Runtime.start("virtualServoController","Arduino")
+    virtualServoController.connect("COM42")
+    
+    virtualVerin = Runtime.start("virtualVerin","Servo")
+    virtualVerin.attach(virtualServoController.getName(), 42)
+    #virtualDirectionTete = Runtime.start("virtualDirectionTete","Servo")
+    #virtualDirectionTete.attach(virtualServoController.getName(), 43)
+    
+    # récupération des evenements
+    virtualVerin.eventsEnabled(True);
+    virtualVerin.addListener("publishServoEvent",python.name,"onVirtualVerinEvent")
+    virtualVerin.map(0,125,0,125)
+    #virtualDirectionTete.eventsEnabled(True);
+    #virtualDirectionTete.addListener("publishServoEvent",python.name,"onvirtualDirectionTeteEvent")
+   
+  else:
+    #we force parameter if arduino is off
+    isTete=0
+    
+def onVirtualVerinEvent(position):
+    verinGauche.moveTo(position)
+    verinDroite.moveTo(position)
+    if not virtualVerin.isMoving():
+      verinGauche.broadcastState()
+      verinDroite.broadcastState()
+      
+def onvirtualDirectionTeteEvent(position):
+    directionTete.moveTo(position)
+    if not directionTete.isMoving():
+      directionTete.broadcastState()

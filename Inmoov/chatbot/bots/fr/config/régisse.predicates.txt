@@ -1,0 +1,40 @@
+lui:baisse les tête
+émotion:joie
+âge:sur les 12 mois de mai en fait à 2
+gender:femelle
+rockpaperscissorsHumanPoints:0
+quoi:baisse les tête
+articles2:unknown
+mastercontent:incomprehension de "baisse les tête" dans le contexte : default
+toi:baisse les tête
+that:t'appelle TU
+determinantinterogatif:QU EST CE QUE
+search:quoi
+aurevoir:oui
+jsenabled:true
+identity:0
+tmp:je ne sais pas
+oldtopic:default
+insulte:je me casse
+rockpaperscissorsRobotPoints:0
+courant:
+cava:ok
+meteo:800
+favbook:short circuit
+effet:un pote qui m a filé le
+memoriser:incomprehension de "baisse les tête" dans le contexte : default pour "régisse"
+aime:l odeur du
+languetraduction:fr
+botname:johnny 5
+favmovie:court circuit
+face:sourire3
+courant2:unknown
+name:régisse
+topic:default
+personnality:abusif
+heshe:ça
+eyecolor:marron
+haircolor:bruns
+job:POSERQUESTION
+articles:
+heurequestion:23

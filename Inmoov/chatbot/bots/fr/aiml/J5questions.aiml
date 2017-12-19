@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>POSE MOI UNE QUESTION</pattern>
+<template><random>
+        <li>
+          <srai>poserquestionperso</srai>
+        </li>
+        <li>
+          <srai>poserquestionfavori</srai>
+        </li>
+        <li>
+          <srai>poserrandomquestion</srai>
+        </li>
+        <li>
+          <srai>demandegenrequestion</srai>
+        </li>
+      </random></template>
+</category>
+</aiml>

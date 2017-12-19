@@ -1,0 +1,6 @@
+def Acdc():
+  MoveAcdcTimer.startClock()
+  
+  
+
+  
