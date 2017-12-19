@@ -5,8 +5,7 @@
 MoveAcdcTimer = Runtime.start("MoveAcdcTimer","Clock")
 
 def MoveAcdc(timedata):
-
-   if i01.RobotCanMoveRandom():   
+  if J5canMoveAcdc:   
     #redefine next loop
     MoveBodyTimer.setInterval(random.randint(1000,5000))
     epauleGauche.setVelocity(random.randint(15,25))
@@ -60,7 +59,13 @@ def MoveAcdc(timedata):
       paupiereBasGauche.moveTo(paupiereBasPos)
  
     
-    else:
-      MoveAcdcTimer.stopClock()
-
+  else:
+    J5canMoveAcdc=True
+    MoveAcdcTimer.stopClock()
+      
+def MoveHeadStart():
+    J5canMoveAcdc=True
+    
+     
 MoveAcdcTimer.addListener("pulse", python.name, "MoveAcdc")
+MoveAcdcTimer.addListener("clockStarted", python.name, "MoveAcdcStart")
