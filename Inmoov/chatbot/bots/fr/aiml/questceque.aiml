@@ -6384,9 +6384,24 @@ La singularité technologique est l'hypothèse que l'invention de l'intelligence
 <category><pattern>QU EST CE QUE TU NE SAIS PAS</pattern>
 <template>Beaucoup trop de chose à mon avis.</template>
 </category>
+<category><pattern>EST CE QUE TU FAIS LE MÉNAGE</pattern>
+<template><random>
+            <li>es ce que je ressemble à un aspirateur</li>
+            <li>demande sa a mon copain daisone</li>
+          </random></template>
+</category>
+<category><pattern>EST CE QUE TU SAIS FAIRE DU CAFÉ</pattern>
+<template><random>
+            <li>es ce que j'ai une tete de cafetière</li>
+            <li> demande à Gringo, lui il sait faire du bon café</li>
+          </random></template>
+</category>
 <category><pattern>QU EST CE QUE TU SAIS FAIRE</pattern>
-<template>Tellement de choses, mais je suis en apprentissage.
-    <srai>CRÉATION EN FRANÇAIS</srai></template>
+<template><random>
+            <li>jouer au ping-pong sans raquette et sans balle</li>
+            <li>jongler sans balles</li>
+            <li>On m'a doté de plusieurs fonctionnalités. Je sais parler plusieurs langues, annoncé la meteo et danser sur de la musique</li>
+          </random></template>
 </category>
 <category><pattern>QU EST CE QUE TU SUGGERE</pattern>
 <template>l association Libre gratuite.</template>

@@ -16,17 +16,19 @@ def MoveHead(timedata):
       directionTete.setVelocity(random.randint(15,30))
       rotationCylindre.setVelocity(random.randint(8,25))
       berceau.setVelocity(random.randint(8,25))
-      sourcilDroit.setVelocity(30)
-      sourcilGauche.setVelocity(30)
-      paupiereBasDroit.setVelocity(30)
-      paupiereBasGauche.setVelocity(30)
+      sourcilDroit.setVelocity(random.randint(10,20))
+      sourcilGauche.setVelocity(random.randint(10,20))
+      paupiereBasDroit.setVelocity(random.randint(20,30))
+      paupiereBasGauche.setVelocity(random.randint(20,30))
+      paupiereHautGauche.setVelocity(random.randint(10,20))
+      paupiereHautDroit.setVelocity(random.randint(10,20))
       #wait servo last move
       #une meme position pour les 2
-      sourcilsPos=random.uniform(30,65)
+      sourcilsPos=random.uniform(15,50)
       if not sourcilDroit.isMoving():
         sourcilDroit.moveTo(sourcilsPos)
         sourcilGauche.moveTo(sourcilsPos)
-      paupierePos=random.uniform(120,155)
+      paupierePos=random.uniform(60,155)
       if not paupiereHautGauche.isMoving():
         paupiereHautGauche.moveTo(paupierePos)
         paupiereHautDroit.moveTo(paupierePos)
@@ -39,7 +41,7 @@ def MoveHead(timedata):
       if not verinGauche.isMoving():verinGauche.moveTo(random.uniform(70,95))
       if not directionTete.isMoving():directionTete.moveTo(random.uniform(60,120))
       if not rotationCylindre.isMoving():rotationCylindre.moveTo(random.uniform(100,175))
-      if not berceau.isMoving():berceau.moveTo(random.uniform(100,175))
+      if not berceau.isMoving():berceau.moveTo(random.uniform(0,175))
       
   else:
     MoveHeadTimer.stopClock()

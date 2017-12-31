@@ -335,7 +335,7 @@
 </category>
 <category><pattern>REGARDE À DROITE</pattern>
 <template>Je tourne ma tête à droite.
-        <oob><mrl><service>python</service><method>exec</method><param>lookrightside()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>regardDroit()</param></mrl></oob></template>
 </category>
 <category><pattern>REGARDE SUR TA DROITE</pattern>
 <template><srai>REGARDE à DROITE</srai></template>
@@ -357,7 +357,7 @@
 </category>
 <category><pattern>REGARDE À GAUCHE</pattern>
 <template>Je tourne ma tête à GAUCHE.
-        <oob><mrl><service>python</service><method>exec</method><param>lookleftside()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>regardGauche()</param></mrl></oob></template>
 </category>
 <category><pattern>TOURNE LA TÊTE À GAUCHE</pattern>
 <template><srai>REGARDE à GAUCHE</srai></template>
@@ -373,7 +373,7 @@
 </category>
 <category><pattern>REGARDE AU MILIEU</pattern>
 <template>Je REGARDE AU milieu.
-        <oob><mrl><service>python</service><method>exec</method><param>lookinmiddle()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>regardDevant()</param></mrl></oob></template>
 </category>
 <category><pattern>TOURNE LA TÊTE AU MILIEU</pattern>
 <template><srai>REGARDE AU MILIEU</srai></template>
@@ -388,19 +388,19 @@
 </category>
 <category><pattern>REGARDE EN BAS</pattern>
 <template>Je regarde en bas.
-        <oob><mrl><service>python</service><method>exec</method><param>lookdown()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>basTete()</param></mrl></oob></template>
 </category>
 <category><pattern>PENCHE LA TÊTE À DROITE</pattern>
 <template>Je penche ma TÊTE à droite.
-        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadRightSide()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>inclineDroite()</param></mrl></oob></template>
 </category>
 <category><pattern>PENCHE TA TÊTE À GAUCHE</pattern>
 <template>je penche ma TÊTE à gauche.
-        <oob><mrl><service>python</service><method>exec</method><param>tiltHeadLeftSide()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>inclineGauche()</param></mrl></oob></template>
 </category>
 <category><pattern>BEFORE HAPPY</pattern>
 <template>BEFORE HAPPY
-        <oob><mrl><service>python</service><method>exec</method><param>beforehappy()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>surpris()</param></mrl></oob></template>
 </category>
 <category><pattern>JOYEUX ANNIVERSAIRE</pattern>
 <template>Joyeux anniversaire.
@@ -594,7 +594,7 @@
 </category>
 <category><pattern>MÉCONTENT</pattern>
 <template>Je ne suis pas content.
-        <oob><mrl><service>python</service><method>exec</method><param>unhappy()</param></mrl></oob></template>
+        <oob><mrl><service>python</service><method>exec</method><param>mechant()</param></mrl></oob></template>
 </category>
 <category><pattern>ATTRAPE CECI</pattern>
 <template>Je prends l'objet.
@@ -613,7 +613,7 @@
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>guesswhat()</param>
+            <param>monteSourcil()</param>
           </mrl>
         </oob></template>
 </category>
@@ -672,21 +672,12 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>FAIS MOI NEW YORK</pattern>
-<template><oob>
-          <mrl>
-            <service>python</service>
-            <method>exec</method>
-            <param>newyork()</param>
-          </mrl>
-        </oob></template>
-</category>
 <category><pattern>JOUE TON MORCEAU</pattern>
 <template><oob>
           <mrl>
             <service>python</service>
             <method>exec</method>
-            <param>playsong()</param>
+            <param>PlayAcdc()</param>
           </mrl>
         </oob></template>
 </category>

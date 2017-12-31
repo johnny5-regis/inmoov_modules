@@ -6,7 +6,7 @@ MoveAcdcTimer = Runtime.start("MoveAcdcTimer","Clock")
 
 def MoveAcdc(timedata):
 
-   if i01.RobotCanMoveRandom:   
+   if RobotCanMoveHeadWhileSpeaking and not J5istracking and not i01.RobotIsTrackingSomething():   
     #redefine next loop
     MoveAcdcTimer.setInterval(random.randint(1000,5000))
     epauleGauche.setVelocity(random.randint(15,25))
@@ -65,7 +65,7 @@ def MoveAcdc(timedata):
 
 def MoveAcdcStopped():
   
-  if i01.RobotCanMoveRandom:
+  if RobotCanMoveHeadWhileSpeaking and not J5istracking and not i01.RobotIsTrackingSomething():
     print "MoveAcdcStopped"
     
 MoveAcdcTimer.addListener("pulse", python.name, "MoveAcdc")

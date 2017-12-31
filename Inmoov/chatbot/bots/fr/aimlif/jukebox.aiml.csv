@@ -1,2 +1,0 @@
-0,ÉCOUTER *,*,*,<oob><mrl><service>python</service><method>exec</method><param>PlayUtub("listen"#Comma"<star/>")</param></mrl></oob>,jukebox.aiml
-0,STOP JUKEBOX,*,*,D'accord <oob><mrl><service>python</service><method>exec</method><param>PlayUtub("stop"#Comma"0")</param></mrl></oob>,jukebox.aiml
