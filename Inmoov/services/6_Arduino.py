@@ -78,7 +78,6 @@ def CheckArduinos(Card,Port,slave=0):
         print "Arduino ",Port," OK"
         return True
     else:
-      #bouuuuuhhhh
       errorSpokenFunc('ArduinoNotConnected',Port)
       return False
 
