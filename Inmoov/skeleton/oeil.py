@@ -58,7 +58,7 @@ if isOeil==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
     # servo.attach(ARDUINO, PIN)    
     oeil.attach(right, ThisSkeletonPartConfig.getint('SERVO_PIN', 'oeil'))
     oeil.setAutoDisable(True)
-
+    oeil.setInverted(True)
     
   else:
     #we force parameter if arduino is off

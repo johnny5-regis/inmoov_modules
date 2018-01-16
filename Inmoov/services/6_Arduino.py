@@ -81,3 +81,8 @@ def CheckArduinos(Card,Port,slave=0):
       #bouuuuuhhhh
       errorSpokenFunc('ArduinoNotConnected',Port)
       return False
+
+virtualServoControllerVirtual = Runtime.start("virtualServoControllerVirtual", "VirtualArduino")
+virtualServoControllerVirtual.connect("COM42")
+virtualServoController = Runtime.start("virtualServoController","Arduino")
+virtualServoController.connect("COM42")

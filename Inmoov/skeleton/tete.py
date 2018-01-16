@@ -86,24 +86,22 @@ if isTete==1 and (ScriptType=="RightSide" or ScriptType=="Full"):
     directionTete.setAutoDisable(True)
     
     
-    # déclaration d'un servo virtuel+arduino
-    
-    virtualServoControllerVirtual = Runtime.start("virtualServoControllerVirtual", "VirtualArduino")
-    virtualServoControllerVirtual.connect("COM42")
-    virtualServoController = Runtime.start("virtualServoController","Arduino")
-    virtualServoController.connect("COM42")
-    
+    # déclaration des servo virtuel  
+
+    #virtualVerin
     virtualVerin = Runtime.start("virtualVerin","Servo")
-    virtualVerin.attach(virtualServoController.getName(), 42)
-    #virtualDirectionTete = Runtime.start("virtualDirectionTete","Servo")
-    #virtualDirectionTete.attach(virtualServoController.getName(), 43)
-    
-    # récupération des evenements
+    virtualVerin.attach(virtualServoController.getName(), 41)
     virtualVerin.eventsEnabled(True);
     virtualVerin.addListener("publishServoEvent",python.name,"onVirtualVerinEvent")
     virtualVerin.map(0,125,0,125)
-    #virtualDirectionTete.eventsEnabled(True);
-    #virtualDirectionTete.addListener("publishServoEvent",python.name,"onvirtualDirectionTeteEvent")
+    
+    #virtualDirectionTete
+    virtualDirectionTete = Runtime.start("virtualDirectionTete","Servo")
+    virtualDirectionTete.attach(virtualServoController.getName(), 42)
+    virtualDirectionTete.eventsEnabled(True);
+    virtualDirectionTete.addListener("publishServoEvent",python.name,"onVirtualDirectionTeteEvent")
+    virtualDirectionTete.map(0,125,0,125)
+
    
   else:
     #we force parameter if arduino is off
@@ -116,7 +114,9 @@ def onVirtualVerinEvent(position):
       verinGauche.broadcastState()
       verinDroite.broadcastState()
       
-def onvirtualDirectionTeteEvent(position):
+def onVirtualDirectionTeteEvent(position):
     directionTete.moveTo(position)
-    if not directionTete.isMoving():
+    oeil.moveTo(position)
+    if not virtualDirectionTete.isMoving():
       directionTete.broadcastState()
+      oeil.broadcastState()
