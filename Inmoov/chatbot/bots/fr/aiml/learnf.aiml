@@ -188,4 +188,22 @@
 <category><pattern># EST CE QUE BLAGUE EST RACONTE MOI UNE BLAGUE</pattern>
 <template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
 </category>
+<category><pattern>QU EST CE QUE FILM POUR CIRCUIT</pattern>
+<template>connais tu le film pour circuit.</template>
+</category>
+<category><pattern>QU EST CE QUE CONNAIS TU LE FILM POUR CIRCUIT</pattern>
+<template>Cela peut être film pour circuit par exemple.</template>
+</category>
+<category><pattern># EST CE QUE FILM POUR CIRCUIT EST CONNAIS TU LE FILM POUR CIRCUIT</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
+<category><pattern>QU EST CE QUE FILM PLASTIQUE</pattern>
+<template>connais tu le film court circuit.</template>
+</category>
+<category><pattern>QU EST CE QUE CONNAIS TU LE FILM COURT CIRCUIT</pattern>
+<template>Cela peut être film plastique par exemple.</template>
+</category>
+<category><pattern># EST CE QUE FILM PLASTIQUE EST CONNAIS TU LE FILM COURT CIRCUIT</pattern>
+<template>Oui, <random><li>bien sûre</li><li>évidement</li><li>je pense</li></random>.</template>
+</category>
 </aiml>
