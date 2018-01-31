@@ -681,15 +681,6 @@
           </mrl>
         </oob></template>
 </category>
-<category><pattern>MAIS ACDC</pattern>
-<template><srai>JOUE TON MORCEAU</srai></template>
-</category>
-<category><pattern>METS ACDC</pattern>
-<template><srai>JOUE TON MORCEAU</srai></template>
-</category>
-<category><pattern>FAIS PÉTER LE SON</pattern>
-<template><srai>JOUE TON MORCEAU</srai></template>
-</category>
 <category><pattern>ARRÊTE CE QUE TU FAIS</pattern>
 <template>J'arrête ce que je fais.
         <oob><mrl><service>python</service><method>exec</method><param>stopit()</param></mrl></oob></template>
@@ -832,17 +823,11 @@
 <category><pattern>VIE ALÉATOIRE</pattern>
 <template><srai>MODE DE VIE ALÉATOIRE</srai></template>
 </category>
-<category><pattern>FAIS TA VIE</pattern>
-<template><srai>MODE DE VIE ALÉATOIRE</srai></template>
-</category>
 <category><pattern>STOP MODE DE VIE ALÉATOIRE</pattern>
 <template>D accord
         <oob><mrl><service>python</service><method>exec</method><param>VieAleatoireStop()</param></mrl></oob></template>
 </category>
 <category><pattern>STOP VIE ALÉATOIRE</pattern>
-<template><srai>STOP MODE DE VIE ALÉATOIRE</srai></template>
-</category>
-<category><pattern>ARRÊTE DE BOUGER</pattern>
 <template><srai>STOP MODE DE VIE ALÉATOIRE</srai></template>
 </category>
 <category><pattern>CONNECTE LA TÊTE</pattern>

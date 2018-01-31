@@ -8,7 +8,7 @@ def MoveAcdc(timedata):
 
    if RobotCanMoveHeadWhileSpeaking and not J5istracking and not i01.RobotIsTrackingSomething():   
     #redefine next loop
-    MoveAcdcTimer.setInterval(random.randint(1000,2000))
+    MoveAcdcTimer.setInterval(random.randint(1000,5000))
     epauleGauche.setVelocity(random.randint(15,25))
     epauleDroit.setVelocity(random.randint(15,25))
     brasGauche.setVelocity(random.randint(15,35))
@@ -17,7 +17,7 @@ def MoveAcdc(timedata):
     HomoplateGauche.setVelocity(random.randint(15,20))
     PoignetGauche.setVelocity(random.randint(60,100))
     MainGauche.setVelocity(random.randint(60,100))
-    MainDroit.setVelocity(random.randint(0,180))
+    MainDroit.setVelocity(random.randint(60,100))
     PoignetDroit.setVelocity(random.randint(60,100))
     verinDroite.setVelocity(random.randint(8,25))
     verinGauche.setVelocity(random.randint(8,25))
