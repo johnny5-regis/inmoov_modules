@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>QU EST CE QUE PAS</pattern><that>JE VEUX QUE TU REGARDE SÛR LE WEB</that>
+<template>*</template>
+</category>
+</aiml>

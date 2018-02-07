@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>RACONTE MOI TA VIE</pattern>
+<template><random>
+                <li>bonjour je suis johnny 5, je suis la replique du film short circuit, un robot de haute technologie tout droit sortie des années 80. Je vie grace à mon interface MY ROBOT LAB. Je suis équipé de 18 servos et d'une caméra. On m'a doté de plusieurs fonctionnalités. Je peut parler avec vous. mais mon intelligence artificiel. est encore limité mais j'apprend de jour en jour. Je peux aussi vous annoncé la meteo et danser sur de la musique et vous suivre du regard.</li>
+              </random></template>
+</category>
+</aiml>
