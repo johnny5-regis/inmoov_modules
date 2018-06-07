@@ -157,6 +157,12 @@ female_languagesNatural = {
   'pl' : 'Ryan',
 }
 
+#LocalSpeech tts voice name map 
+male_languagesLocal = { 
+  'fr' : '0',
+  'en' : '2',
+}
+
 #Translate to :
 #TODO ADD TRANSLATED KEYWORDS
 en_languages = {
@@ -204,6 +210,11 @@ if MyvoiceTTS=="NaturalReaderSpeech":
   translatorDegraded=0
   male_languages=male_languagesNatural
   female_languages=female_languagesNatural
+  
+if outputSpeechService=="LocalSpeech":
+  translatorDegraded=0
+  male_languages=male_languagesLocal
+  female_languages=male_languagesLocal
   
 if UseMaleVoice:
   ttsVoiceGender=male_languages
@@ -261,7 +272,7 @@ def translateText(text,language):
       sleep(4)
       runtime.exit()
     
-  if MyvoiceTTS=="Polly" or MyvoiceTTS=="MarySpeech" or MyvoiceTTS=="NaturalReaderSpeech":
+  if MyvoiceTTS=="Polly" or MyvoiceTTS=="MarySpeech" or MyvoiceTTS=="NaturalReaderSpeech" or MyvoiceTTS=="LocalSpeech":
     RealLang="0"
     
     try:
